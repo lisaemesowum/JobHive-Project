@@ -211,6 +211,52 @@
 .Home-main {
   background-color: black;
 }
+/* dropdoen */
+.home-sorting-dropdown {
+  position: relative;
+  display: inline-block;
+}
+.home-sort-btn {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  gap: 6px;
+}
+.home-sort-dropdown {
+  position: absolute;
+  top: 34px;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 180px;
+  display: none;
+  z-index: 1000;
+}
+.home-sort-option{
+    padding: 10px 15px;
+    cursor: pointer;
+}
+.home-sort-dropdown .home-sort-option {
+  padding: 10px 15px;
+  cursor: pointer;
+}
+.home-sort-dropdown .home-sort-option:hover {
+  background-color: #f0f0f0;
+}
+.home-sort-option.active {
+  background-color: #ff5722;
+  color: white;
+  font-weight: 600;
+}
+.home-sorting-dropdown:hover .home-sort-dropdown {
+  display: block;
+}
 
 /* responsive */
 @media (max-width: 768px) {

@@ -1,12 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/Home.css";
-// import { getNames } from "country-list"; // Importing country names (not used in this snippet)
+import { IoMdArrowDropdown } from "react-icons/io";
 import { Country, State, City } from "country-state-city"; // Importing Country, State, and City
-// import { Country } from "country-state-city";
 const Home = () => {
   const countries = Country.getAllCountries(); // Get all country objects
-  // const states = State.getStatesOfCountry("NG"); // Get states of the NG
-  // const cities = City.getCitiesOfCountry("NG", "LA"); // Get cities of the NG
+  // for sort by dropdown
+  const [isDropdownOpen, setIsDropdownOpen] = React.useState(false);
+  const [selectedSort, setSelectedSort] = useState("Date Posted"); // Default sort option
   return (
     <div id="Home" className="Home-container">
       <div className="Home-content">
@@ -133,7 +133,58 @@ const Home = () => {
               </label>
             </fieldset>
           </aside>
-          <div className="Home-main">x</div>
+          <div className="Home-main">
+            {/* main job area  */}
+            <div className="home-sorting-dropdown">
+              <button
+                className="home-sort-btn"
+                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              >
+                Sort by:{" "}
+                <span>
+                  {selectedSort}
+                  <IoMdArrowDropdown />
+                </span>
+              </button>
+
+              {/* dropdown */}
+              <div className="home-sort-dropdown">
+                <div
+                  className={`home-sort-option ${
+                    selectedSort === "Date Posted" ? "active" : "" // Highlight if selected
+                  }`}
+                  onClick={() => {
+                    setSelectedSort("Date Posted");
+                    setIsDropdownOpen(false);
+                  }}
+                >
+                  Date Posted
+                </div>
+                <div
+                  className={`home-sort-option ${
+                    selectedSort === "Salary (High to low)" ? "active" : "" // Highlight if selected
+                  }`}
+                  onClick={() => {
+                    setSelectedSort(" Salary (High to low)");
+                    setIsDropdownOpen(false);
+                  }}
+                >
+                  Salary (High to low)
+                </div>
+                <div
+                  className={`home-sort-option ${
+                    selectedSort === " Relevance Area" ? "active" : "" // Highlight if selected
+                  }`}
+                  onClick={() => {
+                    setSelectedSort("Relevance Area");
+                    setIsDropdownOpen(false);
+                  }}
+                >
+                  Relevance Area
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
