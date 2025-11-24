@@ -1,0 +1,10 @@
+body{
+     /* padding-top: 120px; */
+     scroll-padding-top: 60px;
+}
+/* Targets all sections */
+div[id] { 
+  min-height: 100vh;
+  /* padding: 20px; */
+  border-bottom: 1px solid #ccc; 
+}
