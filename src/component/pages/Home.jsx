@@ -14,11 +14,31 @@ const Home = () => {
         {/* search area */}
         <div className="search-area">
           <div className="search-boxes">
+            {/* keyword Search */}
             <div className="search-box">
               <input
                 type="text"
                 placeholder="Software Engineer, Internship, Remote"
               />
+            </div>
+            {/* Location search */}
+            <div className="search-box">
+              <select>
+                <option value="">Select Location</option>
+                <option>Lagos</option>
+                <option>Abuja</option>
+                <option>Port Harcourt</option>
+                <option>Kano</option>
+                <option>Ibadan</option>
+                <option>Enugu</option>
+                <option>Abeokuta</option>
+                <option>Benin City</option>
+                <option>Jos</option>
+                <option>Ilorin</option>
+                <option>Owerri</option>
+                <option>Calabar</option>
+                
+              </select>
             </div>
             <div className="search-box">
               <input type="text" placeholder="Company name" />
