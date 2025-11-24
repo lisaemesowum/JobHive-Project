@@ -1,10 +1,10 @@
 .Home-container {
- width: 100%;
-  background-color: red;
+  width: 100%;
+  background-color: whitesmoke;
 }
 .Home-content {
   text-align: center;
-  background-color: brown;
+  /* background-color: brown; */
   width: 100%;
   height: 100vh;
   background-image: url("/public/soundtrap-5Wj_tk8_Ens-unsplash.jpg");
@@ -62,15 +62,15 @@
   width: 100%;
   font-family: "Italianno", cursive;
 }
-.search-button{
-    background-color: #ff5722;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 14px;
-    font-family: "Poppins", sans-serif;
+.search-button {
+  background-color: #ff5722;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
 }
 /*  responsive for botton */
 @media (max-width: 768px) {
@@ -89,45 +89,96 @@
 }
 
 /*  find jobs areas */
-.Home-jobs-container{
-    background-color:brown;
-    width: 98%;
-    margin: auto;
-    margin-top: 20px;
-    /* change */
-    height: 100vh;  
+.Home-jobs-container {
+  /* background-color: brown; */
+  width: 98%;
+  margin: auto;
+  margin-top: 20px;
+  /* change */
+  /* height: 100vh; */
 }
 /*  grid area */
-.Home-job-grid{
-    background-color: turquoise;
-    display: grid;
-    grid-template-columns: 350px 1fr;
-    grid-template-rows: 60px 1fr;
-    /* gap: 25px; */
-    padding: 20px;
-    width: 100%;
-    box-sizing: border-box;
-    min-height: 100vh; /* change later */
+.Home-job-grid {
+  /* background-color: turquoise; */
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  /* grid-template-rows: 900px 1fr; */
+  /* gap: 25px; */
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  /* min-height: 100vh; */
 }
 /* sidebar */
-.Home-sidebar{
-padding: 20px;
-background-color: beige;
-
+.Home-sidebar {
+  padding: 20px;
+  background-color: whitesmoke;
+  /* height: 100vh; */
+  position: sticky;
+  top: 90px;
 }
-.Home-main{
-background-color: black;
+
+.filter-group legend {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-family: "Dancing Script", cursive;
 }
-
-
-
-
-
-
+/* fieldset */
+.filter-group {
+  border: 2px solid #d1cbc7;
+  padding: 25px 20px;
+  border-radius: 4px;
+  margin-bottom: 25px;
+  
+}
+/* each radio item */
+.home-toggle {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 17px;
+  font-weight: 500;
+  margin-top: 18px;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+/* custom radio button */
+.home-toggle input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #00f7ff;
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  background: white;
+}
+/* checked state - green outline + green dot inside */
+.home-toggle input[type="radio"]:checked {
+  border-color: #ff5722;
+}
+.home-toggle input[type="radio"]:checked::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: black;
+  border-radius: 50%;
+  top: 10%;
+  left: 10%;
+  transition: translate(-50%, -50%);
+}
+/* main concept */
+.Home-main {
+  background-color: black;
+}
 
 
 /* responsive */
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   .page-layout {
     grid-template-columns: 1fr;
   }

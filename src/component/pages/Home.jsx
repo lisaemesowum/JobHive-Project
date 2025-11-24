@@ -29,13 +29,77 @@ const Home = () => {
       </div>
       {/* find jobs category, experience, job type , remote  sidebar   */}
       <div className="Home-jobs-container">
-       <div className="Home-job-grid">
+        <div className="Home-job-grid">
+          {/* sidebar */}
+          <aside className="Home-sidebar">
+            <fieldset className="filter-group">
+              <legend>Job Category</legend>
+              {/* job category  */}
 
-         <aside className="Home-sidebar">d
+              <label className="home-toggle">
+                <input type="radio" name="role" id="" />
+                IT & Software
+              </label>
 
-         </aside>
-        <div className="Home-main">x</div>
-       </div>
+              <label className="home-toggle">
+                <input type="radio" name="role" id="" />
+                Marketing
+              </label>
+
+              <label className="home-toggle">
+                <input type="radio" name="role" id="" />
+                Finance
+              </label>
+
+              <label className="home-toggle">
+                <input type="radio" name="role" id="" />
+                Healthcare
+              </label>
+
+              <label className="home-toggle">
+                <input type="radio" name="role" id="" />
+                Government & Public Sector
+              </label>
+            </fieldset>
+            {/* Experience Level */}
+            <fieldset className="filter-group">
+              <legend>Experience level </legend>
+              <label className="home-toggle">
+                <input type="radio" name="role" id="" />
+                Entry
+              </label>
+
+              <label className="home-toggle">
+                <input type="radio" name="role" id="" />
+                Mid
+              </label>
+
+              <label className="home-toggle">
+                <input type="radio" name="role" id="" />
+                Senior
+              </label>
+            </fieldset>
+            {/* Jog Type */}
+            <fieldset className="filter-group">
+              <legend>Experience level </legend>
+              <label className="home-toggle">
+                <input type="radio" name="role" id="" />
+                Entry
+              </label>
+
+              <label className="home-toggle">
+                <input type="radio" name="role" id="" />
+                Mid
+              </label>
+
+              <label className="home-toggle">
+                <input type="radio" name="role" id="" />
+                Senior
+              </label>
+            </fieldset>
+          </aside>
+          <div className="Home-main">x</div>
+        </div>
       </div>
     </div>
   );
