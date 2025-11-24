@@ -1,6 +1,12 @@
 import React from "react";
 import "../styles/Home.css";
+// import { getNames } from "country-list"; // Importing country names (not used in this snippet)
+import { Country, State, City } from "country-state-city"; // Importing Country, State, and City
+// import { Country } from "country-state-city";
 const Home = () => {
+  const countries = Country.getAllCountries(); // Get all country objects
+  // const states = State.getStatesOfCountry("NG"); // Get states of the NG
+  // const cities = City.getCitiesOfCountry("NG", "LA"); // Get cities of the NG
   return (
     <div id="Home" className="Home-container">
       <div className="Home-content">
@@ -25,19 +31,11 @@ const Home = () => {
             <div className="search-box">
               <select>
                 <option value="">Select Location</option>
-                <option>Lagos</option>
-                <option>Abuja</option>
-                <option>Port Harcourt</option>
-                <option>Kano</option>
-                <option>Ibadan</option>
-                <option>Enugu</option>
-                <option>Abeokuta</option>
-                <option>Benin City</option>
-                <option>Jos</option>
-                <option>Ilorin</option>
-                <option>Owerri</option>
-                <option>Calabar</option>
-                
+                {countries.map((country) => (
+                  <option key={country.name} value={country.name}>
+                    {country.name}
+                  </option>
+                ))}
               </select>
             </div>
             <div className="search-box">
@@ -101,20 +99,37 @@ const Home = () => {
             </fieldset>
             {/* Jog Type */}
             <fieldset className="filter-group">
-              <legend>Experience level </legend>
+              <legend>Job Type </legend>
               <label className="home-toggle">
                 <input type="radio" name="role" id="" />
-                Entry
+                Full-time
               </label>
 
               <label className="home-toggle">
                 <input type="radio" name="role" id="" />
-                Mid
+                Part-time
               </label>
 
               <label className="home-toggle">
                 <input type="radio" name="role" id="" />
-                Senior
+                Internship
+              </label>
+              <label className="home-toggle">
+                <input type="radio" name="role" id="" />
+                Contact
+              </label>
+            </fieldset>
+            {/*  remote / onsite */}
+            <fieldset className="filter-group">
+              <legend>Remote / Onsite</legend>
+              <label className="home-toggle">
+                <input type="radio" name="role" id="" />
+                Remote
+              </label>
+
+              <label className="home-toggle">
+                <input type="radio" name="role" id="" />
+                Onsite
               </label>
             </fieldset>
           </aside>
