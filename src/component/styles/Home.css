@@ -340,21 +340,133 @@
     flex-direction: column;
   }
   /* side and main */
-    .Home-job-grid {
-        grid-template-columns: 1fr;
-    }
-    .Home-sidebar {
-        /* order: 2; sidebar goes down */
-        width: 100%;
-        margin-bottom: 20px;
-    }
-    .Home-main {
-        /* order: 1; */
-        justify-content: center;
-    }
+  .Home-job-grid {
+    grid-template-columns: 1fr;
+  }
+  .Home-sidebar {
+    /* order: 2; sidebar goes down */
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .Home-main {
+    /* order: 1; */
+    justify-content: center;
+  }
 }
 @media (max-width: 1024) {
- .Home-job-grid{
+  .Home-job-grid {
     grid-template-columns: 250px 1fr;
- }
+  }
+}
+
+/*  for apply */
+.home-appy-container {
+  /* background-color:  blur(10px); */
+  background-color: rgba(128, 128, 128, 0.953);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+/* .blurred{
+  filter: blur(9px);
+   pointer-events: none;    
+  user-select: none; 
+} */
+
+.home-apply-ui {
+  background-color: #2827277c;
+  padding: 25px 30px;
+  border-radius: 14px;
+  width: 400px;
+  max-width: 90%;
+  /* display: flex; */
+  color: white;
+  box-shadow: rgba(226, 51, 51, 0.35) 0px 5px 15px;
+}
+.home-apply-ui h2 {
+  margin-bottom: 25px;
+  font-size: 20px;
+  font-family: "PT Serif", serif;
+  font-weight: 800;
+  font-style: italic;
+  text-align: center;
+  color: white;
+}
+.home-apply-ui label {
+  display: block;
+  margin-bottom: 16px;
+  font-weight: 600;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+/* .home-optional{
+border: none;
+} */
+.home-apply-ui input,
+.home-apply-ui textarea {
+  width: 100%;
+  padding: 9px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+  background-color: transparent;
+  font-family: "PT Serif", serif;
+  font-weight: 700;
+  font-style: italic;
+  color: white;
+}
+.Home-apply-form input::placeholder {
+  color: #ccc;
+  font-family: "PT Serif", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+.home-submit {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+.home-submit-btn {
+  background-color: #ff5622c5;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  border: none;
+  padding: 10px 17px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.home-close {
+  background-color: rgba(255, 0, 0, 0.812);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  border: none;
+  padding: 10px 17px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.home-confimation{
+  background-color: #ff5722;
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
 }

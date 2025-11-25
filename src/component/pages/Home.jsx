@@ -4,12 +4,29 @@ import "../styles/Home.css";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { Country, State, City } from "country-state-city"; // Importing Country, State, and City
 // json file
-
+import jobs from "../data/jobs.json";
+// importing the details and tje list
+import JobList from "../reusable/JobList";
+import JobDetails from "../reusable/JobDetails";
 const Home = () => {
   const countries = Country.getAllCountries(); // Get all country objects
   // for sort by dropdown
   const [isDropdownOpen, setIsDropdownOpen] = React.useState(false);
   const [selectedSort, setSelectedSort] = useState("Date Posted"); // Default sort option
+  //
+  const [selectedJob, setSelectedJob] = useState(null);
+  const [showApplyUI, setShowApplyUI] = useState(false);
+  const [showConfirmation, setConfirmation] = useState(false);
+
+  const handleApply = () => {
+    setShowApplyUI(true);
+  };
+  //  go back to job list
+  const handleBack = () => {
+    setSelectedJob(null);
+    setShowApplyUI(false);
+    setConfirmation(true);
+  };
   return (
     <div id="Home" className="Home-container">
       <div className="Home-content">
@@ -194,6 +211,77 @@ const Home = () => {
               )}
             </div>
 
+            {/* end */}
+            {/* job lists */}
+            <div className={`home-area ${showApplyUI ? "blurred" : ""}`}>
+              {selectedJob ? (
+              <JobDetails
+                job={selectedJob}
+                onBack={handleBack}
+                onApply={handleApply}
+              />
+            ) : (
+              <JobList jobs={jobs} onSelect={setSelectedJob} />
+            )}
+
+            {/* Job details */}
+            {showApplyUI && (
+             <div className="home-appy-container">
+               <div className="home-apply-ui">
+                <h2>Apply for {selectedJob.title}</h2>
+                <form className="Home-apply-form">
+                  <label>
+                    Name:
+                    <input type="text" placeholder="Enter your name" required />
+                  </label>
+                  <label>
+                    Email:
+                    <input
+                      type="email"
+                      placeholder="Enter your Email"
+                      required
+                    />
+                  </label>
+                  <label className="home-optional">
+                    Resume(optional);
+                    <input type="file" />
+                  </label>
+                  <label>
+                    Cover Letter:
+                    <textarea
+                      type="text"
+                      placeholder="Write your cover letter.........."
+                      rows={4}
+                      required
+                    />
+                  </label>
+
+                  <div className="home-submit">
+                    <button tyoe="submit" className="home-submit-btn">
+                      Submit
+                    </button>
+                    <button onClick={() => setShowApplyUI(false)} className="home-close">Close</button>
+                  </div>
+                </form>
+              </div>
+             </div>
+            )}
+            {/* confirmation model */}
+            {showConfirmation &&  selectedJob &&(
+              <div className="home-confimation">
+                <div className="home-ccon">
+                  <h2>Application Submitted</h2>
+                  <p>
+                    Thank you for applying to {selectedJob.title} at{" "}
+                    {selectedJob.company} wait for feedback from us.
+                  </p>
+                  <button onClick={() => setConfirmation(false)}>
+                    Close
+                  </button>
+                </div>
+              </div>
+            )}
+            </div>
             {/* end */}
           </div>
         </div>
