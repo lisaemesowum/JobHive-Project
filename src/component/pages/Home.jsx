@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import "../styles/Home.css";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { Country, State, City } from "country-state-city"; // Importing Country, State, and City
+// json file
+
 const Home = () => {
   const countries = Country.getAllCountries(); // Get all country objects
   // for sort by dropdown
