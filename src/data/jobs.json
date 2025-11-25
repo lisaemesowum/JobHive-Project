@@ -1,0 +1,440 @@
+[
+  {
+    "id": 1,
+    "category": "IT & Software",
+    "title": "Software Engineer",
+    "company": "Tech Solutions Inc.",
+    "location": "lagos, Nigeria",
+    "salary": "₦371,000k - ₦542,000k per month",
+    "experience_level": "Mid-Level",
+    "job_type": "Full-Time",
+    "remoeOption": "Remote",
+    "industry": "Information Technology",
+    "date_posted": "2025-11-25",
+    "description": "Develop and maintain web applications using modern frameworks and technologies.",
+    "qualifications": [
+      "Bachelor's degree in Computer Science or related field",
+      "3+ years of experience in software development",
+      "Proficiency in JavaScript, HTML, CSS, and React"
+    ],
+    "responsibilities": [
+      "Design, develop, and test software applications",
+      "Collaborate with cross-functional teams to define project requirements",
+      "Maintain code quality and ensure responsiveness of applications"
+    ],
+    "applicationDeadline": "2025-12-25"
+  },
+  {
+    "id": 2,
+    "category": "IT & Software",
+    "title": "Frontend Developer Intern",
+    "company": "BrightCode Labs",
+    "location": "Lagos, Nigeria",
+    "salary": "₦80,000 - ₦120,000 per month",
+    "experience_level": "Entry-Level",
+    "job_type": "Internship",
+    "remoteOption": "Remote",
+    "industry": "Information Technology",
+    "date_posted": "2025-11-20",
+    "description": "Assist the frontend team in building UI components using React.",
+    "qualifications": [
+      "Basic understanding of React",
+      "Good knowledge of HTML/CSS",
+      "Willingness to learn"
+    ],
+    "responsibilities": [
+      "Support UI development tasks",
+      "Fix minor bugs",
+      "Participate in daily standups"
+    ],
+    "applicationDeadline": "2025-12-10"
+  },
+  {
+    "id": 3,
+    "category": "IT & Software",
+    "title": "UI/UX Designer",
+    "company": "Creative Designs Co.",
+    "location": "Abuja, Nigeria",
+    "salary": "₦200,000k - ₦350,000k per month",
+    "experience_level": "Entry-Level",
+    "job_type": "Part-time",
+    "remoeOption": "On-site",
+    "industry": "Information Technology",
+    "date_posted": "2025-11-27",
+    "description": "Design user interfaces and experiences for web and mobile applications.",
+    "qualifications": [
+      "Bachelor's degree in Design, Human-Computer Interaction, or related field",
+      "3+ years of experience in UI/UX design",
+      "Proficiency in design tools such as Figma, Sketch, and Adobe XD"
+    ],
+    "responsibilities": [
+      "Create wireframes, prototypes, and visual designs",
+      "Conduct user research and usability testing",
+      "Collaborate with developers to implement designs"
+    ],
+    "applicationDeadline": "2025-12-27"
+  },
+  {
+    "id": 4,
+    "category": "IT & Software",
+    "title": "Mobile App Developer",
+    "company": "App Innovators",
+    "location": "Lagos, Nigeria",
+    "salary": "₦350,000k - ₦500,000k per month",
+    "experience_level": "Mid-Level",
+    "job_type": "Contract",
+    "remoeOption": "Remote",
+    "industry": "Information Technology",
+    "date_posted": "2025-11-28",
+    "description": "Develop and maintain mobile applications for iOS and Android platforms.",
+    "qualifications": [
+      "Bachelor's degree in Computer Science or related field",
+      "3+ years of experience in mobile app development",
+      "Proficiency in Swift, Kotlin, and cross-platform frameworks like Flutter or React Native"
+    ],
+    "responsibilities": [
+      "Design, develop, and test mobile applications",
+      "Collaborate with cross-functional teams to define app requirements",
+      "Ensure app performance, quality, and responsiveness"
+    ],
+    "applicationDeadline": "2025-12-28"
+  },
+  {
+    "id": 5,
+    "category": "IT & Software",
+    "title": "DevOps Engineer",
+    "company": "CloudTech Solutions",
+    "location": "Abuja, Nigeria",
+    "salary": "₦450,000k - ₦650,000k per month",
+    "experience_level": "Senior-Level",
+    "job_type": "Full-Time",
+    "remoeOption": "On-site",
+    "industry": "Information Technology",
+    "date_posted": "2025-11-29",
+    "description": "Implement and manage CI/CD pipelines, cloud infrastructure, and automation tools.",
+
+    "qualifications": [
+      "Bachelor's degree in Computer Science or related field",
+      "5+ years of experience in DevOps or related roles",
+      "Proficiency in cloud platforms (AWS, Azure, GCP) and automation tools (Docker, Kubernetes, Jenkins)"
+    ],
+    "responsibilities": [
+      "Design and implement CI/CD pipelines",
+      "Manage cloud infrastructure and ensure system reliability",
+      "Collaborate with development and operations teams to streamline processes"
+    ],
+    "applicationDeadline": "2025-12-29"
+  },
+
+  {
+    "id": 6,
+    "category": "Marketing",
+    "title": "Marketing Manager",
+    "company": "Creative Minds Agency",
+    "location": "Abuja, Nigeria",
+    "salary": "₦250,000k - ₦400,000k per month",
+    "experience_level": "Senior-Level",
+    "job_type": "Full-Time",
+    "remoeOption": "On-site",
+    "industry": "Marketing and Advertising",
+    "date_posted": "2025-11-26",
+    "description": "Lead marketing campaigns and strategies to enhance brand awareness and drive sales.",
+    "qualifications": [
+      "Bachelor's degree in Marketing, Business, or related field",
+      "5+ years of experience in marketing management",
+      "Strong leadership and communication skills"
+    ],
+    "responsibilities": [
+      "Develop and implement marketing strategies",
+      "Manage marketing team and coordinate with other departments",
+      "Analyze market trends and adjust strategies accordingly"
+    ],
+    "applicationDeadline": "2025-12-20"
+  },
+  {
+    "id": 7,
+    "category": "Marketing",
+    "title": "Digital Marketing Intern",
+    "company": "MediaSpark Agency",
+    "location": "Abuja, Nigeria",
+    "salary": "₦60,000 - ₦100,000 per month",
+    "experience_level": "Entry-Level",
+    "job_type": "Internship",
+    "remoteOption": "Remote",
+    "industry": "Marketing",
+    "date_posted": "2025-11-22",
+    "description": "Assist in running social media ads and content creation.",
+    "qualifications": [
+      "Basic knowledge of social media ads",
+      "Creative thinking",
+      "Good communication skills"
+    ],
+    "responsibilities": [
+      "Create content",
+      "Monitor social posts",
+      "Support campaign setup"
+    ],
+    "applicationDeadline": "2025-12-08"
+  },
+  {
+    "id": 8,
+    "category": "Marketing",
+    "title": "Content Writer (3-Month Contract)",
+    "company": "BrandBoost",
+    "location": "Port Harcourt, Nigeria",
+    "salary": "₦150,000 - ₦220,000 per month",
+    "experience_level": "Mid-Level",
+    "job_type": "Contract",
+    "remoteOption": "Remote",
+    "industry": "Branding",
+    "date_posted": "2025-11-27",
+    "description": "Write blog articles and product descriptions for clients.",
+    "qualifications": ["Strong English writing", "SEO knowledge"],
+    "responsibilities": ["Write articles", "Edit content", "Update blogs"],
+    "applicationDeadline": "2026-01-12"
+  },
+  {
+    "id": 9,
+    "category": "Marketing",
+    "title": "SEO Specialist",
+    "company": "Search Engine Experts",
+    "location": "Port Harcourt, Nigeria",
+    "salary": "₦200,000k - ₦350,000k per month",
+    "experience_level": "Mid-Level",
+    "job_type": "Part-Time",
+    "remoeOption": "On-site",
+    "industry": "Digital Marketing",
+    "date_posted": "2025-11-29",
+    "description": "Optimize website content and structure to improve search engine rankings and drive organic traffic.",
+    "qualifications": [
+      "Bachelor's degree in Marketing, IT, or related field",
+      "3+ years of experience in SEO",
+      "Proficiency in SEO tools such as Google Analytics, SEMrush, and Ahrefs"
+    ],
+    "responsibilities": [
+      "Conduct keyword research and optimize website content",
+      "Monitor and analyze website performance using SEO tools",
+      "Develop and implement link-building strategies"
+    ],
+    "applicationDeadline": "2025-12-28"
+  },
+  {
+    "id": 10,
+    "category": "Marketing",
+    "title": "Social Media Manager",
+    "company": "Social Buzz Agency",
+    "location": "Lagos, Nigeria",
+    "salary": "₦220,000k - ₦370,000k per month",
+    "experience_level": "Mid-Level",
+    "job_type": "Full-Time",
+    "remoeOption": "On-site",
+    "industry": "Social Media Marketing",
+    "date_posted": "2025-11-30",
+    "description": "Manage and grow social media presence across various platforms to engage audiences and promote brand awareness.",
+    "qualifications": [
+      "Bachelor's degree in Marketing, Communications, or related field",
+      "3+ years of experience in social media management",
+      "Proficiency in social media platforms and analytics tools"
+    ],
+    "responsibilities": [
+      "Develop and implement social media strategies",
+      "Create and curate engaging content for social media channels",
+      "Monitor social media performance and analyze metrics"
+    ],
+    "applicationDeadline": "2025-12-30"
+  },
+  {
+    "id": 11,
+    "category": "Finance",
+    "title": "Financial Analyst",
+    "company": "Global Finance Corp.",
+    "location": "Lagos, Nigeria",
+    "salary": "₦300,000k - ₦450,000k per month",
+    "experience_level": "Mid-Level",
+    "job_type": "Full-Time",
+    "remoeOption": "Hybrid",
+    "industry": "Financial Services",
+    "date_posted": "2025-11-27",
+    "description": "Analyze financial data and provide insights to support business decisions.",
+    "qualifications": [
+      "Bachelor's degree in Finance, Economics, or related field",
+      "3+ years of experience in financial analysis",
+      "Proficiency in financial modeling and data analysis tools"
+    ],
+    "responsibilities": [
+      "Conduct financial analysis and prepare reports",
+      "Support budgeting and forecasting processes",
+      "Collaborate with other departments to provide financial insights"
+    ],
+    "applicationDeadline": "2025-12-22"
+  },
+  {
+    "id": 12,
+    "category": "Finance",
+    "title": "Part-Time Cashier",
+    "company": "MegaMart Stores",
+    "location": "Kano, Nigeria",
+    "salary": "₦70,000 - ₦110,000 per month",
+    "experience_level": "Entry-Level",
+    "job_type": "Part-Time",
+    "remoteOption": "On-site",
+    "industry": "Retail",
+    "date_posted": "2025-11-30",
+    "description": "Handle customer transactions and receipts.",
+    "qualifications": ["Basic math skills", "Good customer service"],
+    "responsibilities": ["Scan items", "Issue receipts", "Balance cash drawer"],
+    "applicationDeadline": "2026-01-04"
+  },
+  {
+    "id": 13,
+    "category": "Finance",
+    "title": "Contract Auditor",
+    "company": "ClearBooks Audit",
+    "location": "Abuja, Nigeria",
+    "salary": "₦400,000 - ₦600,000 per month",
+    "experience_level": "Senior-Level",
+    "job_type": "Contract",
+    "remoteOption": "On-site",
+    "industry": "Finance",
+    "date_posted": "2025-11-28",
+    "description": "Conduct an independent audit for 2025 financial year.",
+    "qualifications": ["ICAN or ACCA certification", "5+ years auditing"],
+    "responsibilities": [
+      "Review accounts",
+      "Prepare audit reports",
+      "Ensure regulatory compliance"
+    ],
+    "applicationDeadline": "2026-01-10"
+  },
+  {
+    "id": 13,
+    "category": "Healthcare",
+    "title": "Registered Nurse",
+    "company": "City Hospital",
+    "location": "Kano, Nigeria",
+    "salary": "₦200,000k - ₦350,000k per month",
+    "experience_level": "Entry-Level",
+    "job_type": "Full-Time",
+    "remoeOption": "On-site",
+    "industry": "Healthcare",
+    "date_posted": "2025-11-28",
+    "description": "Provide patient care and support in a hospital setting.",
+    "qualifications": [
+      "Bachelor's degree in Nursing",
+      "Valid nursing license",
+      "Excellent communication and interpersonal skills"
+    ],
+    "responsibilities": [
+      "Administer medications and treatments to patients",
+      "Monitor patient health and report changes to medical staff",
+      "Educate patients and their families on health management"
+    ],
+    "applicationDeadline": "2025-12-30"
+  },
+  {
+    "id": 14,
+    "category": "Healthcare",
+    "title": "Contract Pharmacist",
+    "company": "HealthPlus Pharmacy",
+    "location": "Lagos, Nigeria",
+    "salary": "₦250,000 - ₦350,000 per month",
+    "experience_level": "Mid-Level",
+    "job_type": "Contract",
+    "remoteOption": "On-site",
+    "industry": "Pharmacy",
+    "date_posted": "2025-11-29",
+    "description": "Provide prescription services and assist with drug management.",
+    "qualifications": ["Degree in Pharmacy", "Valid license"],
+    "responsibilities": [
+      "Dispense drugs",
+      "Counsel patients",
+      "Check prescriptions"
+    ],
+    "applicationDeadline": "2026-01-08"
+  },
+  {
+    "id": 15,
+    "category": "Healthcare",
+    "title": "Clinic Records Assistant",
+    "company": "Lifeline Clinic",
+    "location": "Ibadan, Nigeria",
+    "salary": "₦80,000 - ₦120,000 per month",
+    "experience_level": "Entry-Level",
+    "job_type": "Part-Time",
+    "remoteOption": "On-site",
+    "industry": "Healthcare",
+    "date_posted": "2025-11-29",
+    "description": "Assist with patient data entry and record organization.",
+    "qualifications": ["Basic computer skills", "Good organization skill"],
+    "responsibilities": [
+      "Input patient data",
+      "Organize files",
+      "Support daily admin tasks"
+    ],
+    "applicationDeadline": "2026-01-03"
+  },
+  {
+    "id": 5,
+    "category": "Government & Public Sector",
+    "title": "Policy Analyst",
+    "company": "National Policy Institute",
+    "location": "Abuja, Nigeria",
+    "salary": "₦280,000k - ₦420,000k per month",
+    "experience_level": "Mid-Level",
+    "job_type": "Full-Time",
+    "remoeOption": "Hybrid",
+    "industry": "Government",
+    "date_posted": "2025-11-29",
+    "description": "Research and analyze public policies to provide recommendations for government agencies.",
+    "qualifications": [
+      "Bachelor's degree in Public Policy, Political Science, or related field",
+      "3+ years of experience in policy analysis",
+      "Strong research and analytical skills"
+    ],
+
+    "responsibilities": [
+      "Conduct research on public policies and their impacts",
+      "Prepare reports and policy briefs for government agencies",
+      "Collaborate with stakeholders to gather insights and feedback"
+    ],
+    "applicationDeadline": "2025-12-28"
+  },
+  {
+    "id": 15,
+    "category": "Government & Public Sector",
+    "title": "Library Assistant",
+    "company": "State Library Board",
+    "location": "Abuja, Nigeria",
+    "salary": "₦85,000 - ₦130,000 per month",
+    "experience_level": "Entry-Level",
+    "job_type": "Part-Time",
+    "remoteOption": "On-site",
+    "industry": "Public Service",
+    "date_posted": "2025-11-25",
+    "description": "Assist with book cataloging and helping visitors find materials.",
+    "qualifications": ["Good reading culture", "Basic organization skills"],
+    "responsibilities": [
+      "Organize books",
+      "Help library visitors",
+      "Update records"
+    ],
+    "applicationDeadline": "2026-01-02"
+  },
+  {
+    "id": 20,
+    "category": "Government & Public Sector",
+    "title": "Data Entry Contractor",
+    "company": "Local Government Office",
+    "location": "Osun, Nigeria",
+    "salary": "₦120,000 - ₦180,000 per month",
+    "experience_level": "Entry-Level",
+    "job_type": "Contract",
+    "remoteOption": "Hybrid",
+    "industry": "Government",
+    "date_posted": "2025-11-30",
+    "description": "Support government data digitization project.",
+    "qualifications": ["Basic Excel", "Fast typing"],
+    "responsibilities": ["Enter data", "Update records", "Assist admin team"],
+    "applicationDeadline": "2026-01-20"
+  }
+]
