@@ -50,7 +50,7 @@ if(!job){
         </div>
       )}
 
-      <button  onClick={onApply} className="apply-btn">Apply Now</button>
+      <button  onClick={onApply} className="jobapply-btn">Apply Now</button>
     </div>
 
   )

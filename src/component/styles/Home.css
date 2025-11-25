@@ -147,7 +147,7 @@
 }
 /* sidebar */
 .Home-sidebar {
-  padding: 20px;
+  padding: 15px;
   background-color: whitesmoke;
   /* height: 100vh; */
   /* position: sticky;
@@ -158,13 +158,13 @@
 .filter-group legend {
   font-size: 17px;
   font-weight: 600;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
   font-family: "Dancing Script", cursive;
 }
 /* fieldset */
 .filter-group {
   border: 2px solid #d1cbc7;
-  padding: 25px 20px;
+  padding: 10px 20px;
   border-radius: 4px;
   margin-bottom: 25px;
 }
@@ -231,7 +231,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px 12px;
+  /* padding: 8px 12px; */
   border-radius: 8px;
   cursor: pointer;
   font-size: 15px;

@@ -1,0 +1,123 @@
+/* ====== JOB DETAILS WRAPPER ====== */
+.job-details {
+  width: 90%;
+  max-width: 900px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 35px;
+  border-radius: 22px;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 4px 12px;
+  animation: fadeIn 0.4s ease;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Smooth fade in */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ====== BACK BUTTON ====== */
+.job-details > button {
+  background: #ececec;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  transition: 0.2s ease;
+}
+
+.job-details > button:hover {
+  background: #d4d4d4;
+}
+
+/* ====== HEADER ====== */
+.job-header {
+  margin-bottom: 25px;
+}
+
+.job-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 5px;
+  font-family: "PT Serif", serif;
+  font-style: italic;
+}
+
+.company {
+  font-size: 18px;
+  color: #888;
+  margin-top: -3px;
+}
+
+/* ====== META SECTION ====== */
+.job-meta {
+  margin-bottom: 25px;
+  background: #f7f7f7;
+  padding: 15px 18px;
+  border-radius: 12px;
+}
+
+.job-meta p {
+  font-size: 15px;
+  margin: 6px 0;
+}
+
+/* ====== SECTION TITLES ====== */
+.job-description h3,
+.job-responsibilities h3,
+.job-requirements h3 {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 600;
+  border-bottom: 2px solid #ff5722;
+  display: inline-block;
+  padding-bottom: 3px;
+}
+
+/* ====== BODY TEXT ====== */
+.job-description p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ====== LISTS ====== */
+.job-responsibilities ul,
+.job-requirements ul {
+  padding-left: 18px;
+  margin-top: 10px;
+}
+
+.job-responsibilities li,
+.job-requirements li {
+  margin-bottom: 8px;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* ====== APPLY BUTTON ====== */
+.jobapply-btn {
+  margin-top: 30px;
+  width: 100%;
+  background: #ff5722;
+  padding: 14px 0;
+  border-radius: 14px;
+  border: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+  font-family: "Poppins", sans-serif;
+}
+
+.apply-btn:hover {
+  background: #e2440e;
+  transform: scale(1.02);
+}
