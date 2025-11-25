@@ -67,21 +67,21 @@
 /* --- LIST LAYOUT WITH SCROLL --- */
 .joblists {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* EXACTLY 2 per row */
+  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-columns: 1fr; */
   gap: 20px;
   padding: 25px;
   scrollbar-width: none;
-  max-height: 880px; /* Show about 4 rows */
+  max-height: 840px; /* Show about 4 rows */
   overflow-x: auto; /* Enable scrolling for more cards */
   padding-right: 10px; /* Prevent card cutoff */
 }
 
-.joblists::-webkit-scrollbar-thumb {
+/* .joblists::-webkit-scrollbar-thumb {
   background: #c7c7c7;
   border-radius: 10px;
 }
 
 .joblists::-webkit-scrollbar-thumb:hover {
   background: #a8a8a8;
-}
-
+} */
