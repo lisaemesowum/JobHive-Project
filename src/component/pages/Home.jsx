@@ -267,7 +267,7 @@ const Home = () => {
              </div>
             )}
             {/* confirmation model */}
-            {showConfirmation &&  selectedJob &&(
+            {/* {showConfirmation &&  selectedJob &&(
               <div className="home-confimation">
                 <div className="home-ccon">
                   <h2>Application Submitted</h2>
@@ -280,7 +280,7 @@ const Home = () => {
                   </button>
                 </div>
               </div>
-            )}
+            )} */}
             </div>
             {/* end */}
           </div>

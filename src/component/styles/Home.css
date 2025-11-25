@@ -222,7 +222,7 @@
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
 }
 .home-sort-btn {
   background-color: transparent;
