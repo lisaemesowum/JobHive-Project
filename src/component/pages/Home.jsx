@@ -1,20 +1,15 @@
 import React, { useEffect, useState } from "react";
-// import "../styles/Home.css";
 import "../styles/Home.css";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { Country, State, City } from "country-state-city"; // Importing Country, State, and City
-// json file
 import jobs from "../data/jobs.json"; //  data file;
-// importing the details and tje list
 import JobList from "../reusable/JobList";
 import JobDetails from "../reusable/JobDetails";
 import SearchBar from "../reusable/SearchBar";
-const Home = () => {
-  const countries = Country.getAllCountries(); // Get all country objects
-  // for sort by dropdown
+import SavedJob from "./SavedJob";
+const Home = ({ savedJobs, setSavedJobs }) => {
   const [isDropdownOpen, setIsDropdownOpen] = React.useState(false);
   const [selectedSort, setSelectedSort] = useState("Date Posted"); // Default sort option
-  //
   const [selectedJob, setSelectedJob] = useState(null);
   const [showApplyUI, setShowApplyUI] = useState(false);
   const [showConfirmation, setConfirmation] = useState(false);
@@ -43,6 +38,8 @@ const Home = () => {
   };
   // search area
   const [filteredJob, setFilteredJob] = useState(jobs);
+
+  // / search job
 
   const handleSearch = ({ keyword, location, company }) => {
     let result = jobs;
@@ -73,44 +70,18 @@ const Home = () => {
 
     setFilteredJob(result);
   };
-  //  sorting function
-  useEffect(() => {
-    let sorted = [...filteredJob];
 
-    if (selectedSort === "Date Posted") {
-      sorted.sort((a, b) => new Date(b.date_posted) - new Date(a.date_posted));
-    } else if (selectedSort === "Salary (High to low)") {
-      sorted.sort((a, b) => {
-        const getMaxSalary = (salaryStr) => {
-          if (!salaryStr) return 0;
-          const parts = salaryStr.split("-"); // "₦371,000k - ₦542,000k"
-          const numberPart = parts[parts.length - 1]; // take the higher salary
-          const numeric = parseInt(numberPart.replace(/[^0-9]/g, ""));
-          return isNaN(numeric) ? 0 : numeric;
-        };
-        return getMaxSalary(b.salary) - getMaxSalary(a.salary);
-      });
-    } else if (selectedSort === "Relevance Area") {
-      sorted.sort((a, b) => a.category.localeCompare(b.category));
-    }
-
-    setFilteredJob(sorted);
-  }, [selectedSort, filteredJob]);
-
-  // filters
+  // Combined filtering/sorting effect
   useEffect(() => {
     let result = jobs;
 
-    // Apply search filters (from your SearchBar)
+    // Apply search filters
     if (searchFilters.keyword) {
+      const lower = searchFilters.keyword.toLowerCase();
       result = result.filter(
         (job) =>
-          job.title
-            .toLowerCase()
-            .includes(searchFilters.keyword.toLowerCase()) ||
-          job.description
-            .toLowerCase()
-            .includes(searchFilters.keyword.toLowerCase())
+          job.title.toLowerCase().includes(lower) ||
+          job.description.toLowerCase().includes(lower)
       );
     }
     if (searchFilters.location) {
@@ -136,10 +107,44 @@ const Home = () => {
     if (filters.jobType)
       result = result.filter((job) => job.job_type === filters.jobType);
     if (filters.remote)
-      result = result.filter((job) => job.remoeOption === filters.remote);
+      result = result.filter((job) => job.remoteOption === filters.remote); // Fixed typo: remoeOption → remoteOption
+
+    // Apply sorting
+    if (selectedSort === "Date Posted") {
+      result.sort((a, b) => new Date(b.date_posted) - new Date(a.date_posted));
+    } else if (selectedSort === "Salary (High to low)") {
+      result.sort((a, b) => {
+        const getMaxSalary = (salaryStr) => {
+          if (!salaryStr) return 0;
+          const parts = salaryStr.split("-");
+          const numberPart = parts[parts.length - 1];
+          const numeric = parseInt(numberPart.replace(/[^0-9]/g, ""));
+          return isNaN(numeric) ? 0 : numeric;
+        };
+        return getMaxSalary(b.salary) - getMaxSalary(a.salary);
+      });
+    } else if (selectedSort === "Relevance Area") {
+      result.sort((a, b) => a.category.localeCompare(b.category));
+    }
 
     setFilteredJob(result);
-  }, [searchFilters, filters]);
+  }, [selectedSort, searchFilters, filters]);
+
+  //  save job handler
+  const handleSaveJob = (job) => {
+    if (!savedJobs.some((saved) => saved.id === job.id)) {
+      const updatedSaved = [...savedJobs, job];
+      setSavedJobs(updatedSaved);
+      localStorage.setItem("savedJobs", JSON.stringify(updatedSaved));
+      alert(`${job.title} saved! `); 
+    }
+  };
+  const handleRemoveJob = (jobId) => {
+    const updatedSaved = savedJobs.filter((job) => job.id !== jobId);
+    setSavedJobs(updatedSaved);
+    localStorage.setItem("savedJobs", JSON.stringify(updatedSaved));
+    alert("Job removed from saved! ❌");
+  };
 
   return (
     <div id="Home" className="Home-container">
@@ -262,42 +267,6 @@ const Home = () => {
 
               {/* dropdown */}
               {isDropdownOpen && (
-                // <div className="home-sort-dropdown">
-                //   <div
-                //     className={`home-sort-option ${
-                //       selectedSort === "Date Posted" ? "active" : "" // Highlight if selected
-                //     }`}
-                //     onClick={() => {
-                //       setSelectedSort("Date Posted");
-                //       setIsDropdownOpen(false);
-                //     }}
-                //   >
-                //     Date Posted
-                //   </div>
-                //   <div
-                //     className={`home-sort-option ${
-                //       selectedSort === "Salary (High to low)" ? "active" : "" // Highlight if selected
-                //     }`}
-                //     onClick={() => {
-                //       setSelectedSort(" Salary (High to low)");
-                //       setIsDropdownOpen(false);
-                //     }}
-                //   >
-                //     Salary (High to low)
-                //   </div>
-                //   <div
-                //     className={`home-sort-option ${
-                //       selectedSort === " Relevance Area" ? "active" : "" // Highlight if selected
-                //     }`}
-                //     onClick={() => {
-                //       setSelectedSort("Relevance Area");
-                //       setIsDropdownOpen(false);
-                //     }}
-                //   >
-                //     Relevance Area
-                //   </div>
-                // </div>
-                //
                 <div className="home-sort-dropdown">
                   {[
                     "Date Posted",
@@ -329,9 +298,18 @@ const Home = () => {
                   job={selectedJob}
                   onBack={handleBack}
                   onApply={handleApply}
+                  onRemove={handleRemoveJob}
+                  onSave={handleSaveJob}
+                  savedJobs={savedJobs}
                 />
               ) : (
-                <JobList jobs={filteredJob} onSelect={setSelectedJob} />
+                <JobList
+                  jobs={filteredJob}
+                  onSelect={setSelectedJob}
+                  onSave={handleSaveJob}
+                  savedJobs={savedJobs}
+                  onRemove={handleRemoveJob}
+                />
               )}
 
               {/* Job details */}

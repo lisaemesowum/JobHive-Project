@@ -1,22 +1,27 @@
-import { useState } from 'react'
-import './App.css'
-import Navbar from "./component/Navigation/Navbar.jsx"
-import Home from  "./component/pages/Home.jsx"
-import Contact from "./component/pages/Contact.jsx"
-import Feedback from "./component/pages/Feedback.jsx"
-import SavedJob from "./component/pages/SavedJob.jsx"
+import { useState } from "react";
+import "./App.css";
+import Navbar from "./component/Navigation/Navbar.jsx";
+import Home from "./component/pages/Home.jsx";
+import Contact from "./component/pages/Contact.jsx";
+import Feedback from "./component/pages/Feedback.jsx";
+import SavedJob from "./component/pages/SavedJob.jsx";
 function App() {
-  const [count, setCount] = useState(0)
+  //  so that the home and the save job will connect
+  const [savedJobs, setSavedJobs] = useState(() => {
+    //  load from localStorage
+    const saved = localStorage.getItem("savedJobs");
+    return saved ? JSON.parse(saved) : [];
+  });
 
   return (
     <>
       <Navbar />
-      <Home/>
+      <Home savedJobs={savedJobs} setSavedJobs={setSavedJobs} />
       <Contact />
       <Feedback />
-      <SavedJob />
+      <SavedJob savedJobs={savedJobs} setSavedJobs={setSavedJobs} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
