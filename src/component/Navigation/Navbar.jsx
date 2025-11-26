@@ -25,7 +25,7 @@ const Navbar = () => {
                 Home
               </a>
             </li>
-            <li>
+            {/* <li>
               <a
                 href="#ContactUs"
                 onClick={() => setIsOpen(false)}
@@ -35,7 +35,7 @@ const Navbar = () => {
               >
                 Find Jobs
               </a>
-            </li>
+            </li> */}
             <li>
               <a
                 href="#SavedJob"

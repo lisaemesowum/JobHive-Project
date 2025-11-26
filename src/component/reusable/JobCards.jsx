@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "../styles/JobCards.css";
 import { CiBookmark } from "react-icons/ci";
 import { FcBookmark } from "react-icons/fc";
-// for the home diplay and and if you click taking you to the details
 const JobCards = ({ job, onSelect, onSave, onRemove, savedJobs = [] }) => {
   const isSaved = savedJobs.some((saved) => saved.id === job.id);
 
@@ -13,7 +12,7 @@ const JobCards = ({ job, onSelect, onSave, onRemove, savedJobs = [] }) => {
   const handleBookmark = (e) => {
     e.stopPropagation(); // Prevent opening details
     if (isSaved) {
-       onRemove?.(job.id); // Remove if saved
+      onRemove?.(job.id); // Remove if saved
     } else {
       if (onSave) onSave(job);
     }
@@ -47,7 +46,7 @@ const JobCards = ({ job, onSelect, onSave, onRemove, savedJobs = [] }) => {
         </button>
         {/*  saves */}
         <button
-         className={`bookmark-btn ${isSaved ? "saved" : ""}`}
+          className={`bookmark-btn ${isSaved ? "saved" : ""}`}
           onClick={handleBookmark}
           title={isSaved ? "Saved" : "Save Job"}
         >

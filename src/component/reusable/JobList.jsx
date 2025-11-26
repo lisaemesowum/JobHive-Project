@@ -12,7 +12,6 @@ const JobList = ({ jobs = [], onSelect, onSave, onRemove, savedJobs = [] }) => {
           onSelect={onSelect}
           onSave={onSave}
           onRemove={onRemove}
-          // onApply={() => alert("open apply ui")}
           savedJobs={savedJobs}
         />
       ))}

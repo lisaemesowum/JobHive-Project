@@ -1,18 +1,17 @@
 import React, { useEffect, useState } from "react";
 import "../styles/Home.css";
 import { IoMdArrowDropdown } from "react-icons/io";
-import { Country, State, City } from "country-state-city"; // Importing Country, State, and City
 import jobs from "../data/jobs.json"; //  data file;
 import JobList from "../reusable/JobList";
 import JobDetails from "../reusable/JobDetails";
 import SearchBar from "../reusable/SearchBar";
-import SavedJob from "./SavedJob";
 const Home = ({ savedJobs, setSavedJobs }) => {
   const [isDropdownOpen, setIsDropdownOpen] = React.useState(false);
   const [selectedSort, setSelectedSort] = useState("Date Posted"); // Default sort option
   const [selectedJob, setSelectedJob] = useState(null);
   const [showApplyUI, setShowApplyUI] = useState(false);
   const [showConfirmation, setConfirmation] = useState(false);
+  const [filteredJob, setFilteredJob] = useState(jobs); // search area
 
   // state for sidebar fiters
   const [filters, setFilters] = useState({
@@ -36,11 +35,8 @@ const Home = ({ savedJobs, setSavedJobs }) => {
     setShowApplyUI(false);
     setConfirmation(true);
   };
-  // search area
-  const [filteredJob, setFilteredJob] = useState(jobs);
 
-  // / search job
-
+  //  search job
   const handleSearch = ({ keyword, location, company }) => {
     let result = jobs;
 
@@ -71,17 +67,17 @@ const Home = ({ savedJobs, setSavedJobs }) => {
     setFilteredJob(result);
   };
 
-  // Combined filtering/sorting effect
+  //  filtering/sorting effect
   useEffect(() => {
     let result = jobs;
 
     // Apply search filters
     if (searchFilters.keyword) {
-      const lower = searchFilters.keyword.toLowerCase();
+      const lowerC = searchFilters.keyword.toLowerCase();
       result = result.filter(
         (job) =>
-          job.title.toLowerCase().includes(lower) ||
-          job.description.toLowerCase().includes(lower)
+          job.title.toLowerCase().includes(lowerC) ||
+          job.description.toLowerCase().includes(lowerC)
       );
     }
     if (searchFilters.location) {
@@ -107,7 +103,7 @@ const Home = ({ savedJobs, setSavedJobs }) => {
     if (filters.jobType)
       result = result.filter((job) => job.job_type === filters.jobType);
     if (filters.remote)
-      result = result.filter((job) => job.remoteOption === filters.remote); // Fixed typo: remoeOption → remoteOption
+      result = result.filter((job) => job.remoteOption === filters.remote);
 
     // Apply sorting
     if (selectedSort === "Date Posted") {
@@ -136,7 +132,7 @@ const Home = ({ savedJobs, setSavedJobs }) => {
       const updatedSaved = [...savedJobs, job];
       setSavedJobs(updatedSaved);
       localStorage.setItem("savedJobs", JSON.stringify(updatedSaved));
-      alert(`${job.title} saved! `); 
+      alert(`${job.title} saved! `);
     }
   };
   const handleRemoveJob = (jobId) => {
@@ -155,13 +151,9 @@ const Home = ({ savedJobs, setSavedJobs }) => {
           with employers, and take the next step in your professional journey
           with JobHive.
         </p>
-
         {/* search area */}
-
         <div className="">
           <SearchBar onSearch={handleSearch} />
-          {/* show filtered jobs */}
-          {/* <JobList jobs={filteredJob} onSelect={(job) => console.log(job)} /> */}
         </div>
       </div>
       {/* find jobs category, experience, job type , remote  sidebar   */}
@@ -192,7 +184,7 @@ const Home = ({ savedJobs, setSavedJobs }) => {
                 </label>
               ))}
             </fieldset>
-
+            {/* experience level */}
             <fieldset className="filter-group">
               <legend>Experience level</legend>
               {["Entry", "Mid", "Senior"].map((exp) => (
@@ -210,7 +202,7 @@ const Home = ({ savedJobs, setSavedJobs }) => {
                 </label>
               ))}
             </fieldset>
-
+            {/* job type */}
             <fieldset className="filter-group">
               <legend>Job Type</legend>
               {["Full-time", "Part-time", "Internship", "Contract"].map(
@@ -230,7 +222,7 @@ const Home = ({ savedJobs, setSavedJobs }) => {
                 )
               )}
             </fieldset>
-
+            {/* remote */}
             <fieldset className="filter-group">
               <legend>Remote / Onsite</legend>
               {["Remote", "Onsite"].map((remote) => (
@@ -247,14 +239,13 @@ const Home = ({ savedJobs, setSavedJobs }) => {
               ))}
             </fieldset>
           </aside>
+          {/*  main area */}
           <div className="Home-main">
             {/* main job area  */}
-
             <div className="home-sorting-dropdown">
               <button
                 className="home-sort-btn"
                 onClick={() => {
-                  // console.log("Clicked!");
                   setIsDropdownOpen(!isDropdownOpen);
                 }}
               >
@@ -264,7 +255,6 @@ const Home = ({ savedJobs, setSavedJobs }) => {
                   <IoMdArrowDropdown />
                 </span>
               </button>
-
               {/* dropdown */}
               {isDropdownOpen && (
                 <div className="home-sort-dropdown">
@@ -289,8 +279,6 @@ const Home = ({ savedJobs, setSavedJobs }) => {
                 </div>
               )}
             </div>
-
-            {/* end */}
             {/* job lists */}
             <div className={`home-area ${showApplyUI ? "blurred" : ""}`}>
               {selectedJob ? (
