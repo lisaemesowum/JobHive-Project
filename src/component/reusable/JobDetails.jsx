@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/JobDetails.css";
-
+import { CiBookmark } from "react-icons/ci";
+import { FcBookmark } from "react-icons/fc";
 // this the full job details
 const JobDetails = ({
   job,
@@ -38,7 +39,7 @@ const JobDetails = ({
           onClick={handleBookmark}
           title={isSaved ? "Unsave Job" : "Save Job"}
         >
-          {isSaved ? <FaBookmark size={20} /> : <CiBookmark size={20} />}
+          {isSaved ? <FcBookmark size={20} /> : <CiBookmark size={20} />}
         </button>
       </div>
 

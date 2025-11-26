@@ -103,7 +103,7 @@ const Home = ({ savedJobs, setSavedJobs }) => {
     if (filters.jobType)
       result = result.filter((job) => job.job_type === filters.jobType);
     if (filters.remote)
-      result = result.filter((job) => job.remoteOption === filters.remote);
+      result = result.filter((job) => job.remoeOption === filters.remote);
 
     // Apply sorting
     if (selectedSort === "Date Posted") {
