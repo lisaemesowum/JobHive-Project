@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../styles/Home.css";
 import { Country, State, City } from "country-state-city"; // Importing Country, State, and City
 const SearchBar = ({ onSearch }) => {
   const [keyword, setKeyword] = useState("");
@@ -28,7 +29,7 @@ const SearchBar = ({ onSearch }) => {
               value={location}
               onChange={(e) => setLocation(e.target.value)}
             >
-              <option value="">Select Location</option>
+              <option value="" style={{color:"red"}}>Select Location</option>
               {countries.map((country) => (
                 <option key={country.name} value={country.name}>
                   {country.name}
