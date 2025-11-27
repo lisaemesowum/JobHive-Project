@@ -558,9 +558,9 @@ border: none;
   }
   .Home-content {
     text-align: center;
-    background-position: 0 71px;
-    max-height: 710px;
-    background-color: #ff5722;
+    /* background-position: 0 74px; */
+    max-height: 810px;
+    /* background-color: #ff5722; */
     
     padding-top: 160px;
     color: #fff;
@@ -573,10 +573,6 @@ border: none;
   .search-button {
     padding: 12px 5px;
   }
-  /* .search-area {
-    gap: 15px;
-    border-radius: 8px;
-  } */
   .search-boxes {
     flex-direction: column;
     width: 100%;
