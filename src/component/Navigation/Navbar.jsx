@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../styles/Navbar.css";
 import { FaAlignJustify } from "react-icons/fa";
+import {animateScroll as scroll } from "react-scroll"
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
   const [active, setActive] = useState("home");
@@ -21,6 +22,7 @@ const Navbar = () => {
                 onClick={() => {
                   setActive("home");
                   setIsOpen(false);
+                  
                 }}
                 className={
                   active === "home" ? "nav-item active-nav" : "nav-item"

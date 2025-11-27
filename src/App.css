@@ -2,6 +2,9 @@ body{
      /* padding-top: 120px; */
      scroll-padding-top: 60px;
 }
+html {
+  scroll-behavior: smooth;
+}
 /* Targets all sections */
 div[id] { 
   /* min-height: 130vh; */
