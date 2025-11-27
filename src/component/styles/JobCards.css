@@ -50,7 +50,8 @@
   border-radius: 12px;
   font-size: 15px;
   cursor: pointer;
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
+  font-family: "Roboto Slab", serif;
   font-weight: 100;
   transition: 0.25s ease;
   align-self: flex-start;
@@ -109,9 +110,24 @@
   .jobs-btn {
     font-family: "Roboto Slab", serif;
     color: white;
+    padding: 8px 14px;
+    font-size: 14px;
   }
   .applyJob-button {
     font-family: "Roboto Slab", serif;
     color: white;
+  }
+  .job-card{
+    padding: 15px;
+  }
+  .job-card h3{
+    font-size: 1.2rem;
+  }
+  .job-card p{
+   font-size: 0.9rem;
+  }
+  .bookmark-btn{
+    width: 48px;
+    height: 36px;
   }
 }
