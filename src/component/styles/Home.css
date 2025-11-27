@@ -125,9 +125,6 @@
 .Home-sidebar {
   padding: 15px;
   background-color: whitesmoke;
-  /* height: 100vh; */
-  /* position: sticky;
-  top: 90px; */
   border: 2px solid #d1cbc7;
 }
 
@@ -194,6 +191,7 @@
 /* dropdoen */
 .home-sorting-dropdown {
   position: relative;
+  margin-bottom: 10px;
   display: inline-block;
   width: 100%;
   display: flex;
@@ -448,14 +446,28 @@ border: none;
     font-family: "Roboto Slab", serif;
     font-size: 14px;
   }
-  .home-sort-option{
+  .home-sort-option {
     font-family: "Roboto Slab", serif;
-    /* font-size: 15px; */
-    /* background-color: #ff5722; */
   }
-  .home-sort-option.active{
-   font-family: "Roboto Slab", serif;
+  .home-sort-option.active {
+    font-family: "Roboto Slab", serif;
     color: rgba(0, 0, 0, 0.915);
   }
+  .filter-group legend {
+    font-family: "Roboto Slab", serif;
+    font-size: 19px;
+  }
+  .Home-sidebar {
+    padding: 20px;
+  }
+  .Home-job-grid{
+    /* background-color: #ff5722; */
+    padding: 10px;
+  }
+  .filter-group{
+    padding: 0 20px;
+  border-radius: 4px;
+  margin-bottom: 25px;
+  
+  }
 }
-

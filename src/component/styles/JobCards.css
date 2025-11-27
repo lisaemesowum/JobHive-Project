@@ -102,7 +102,7 @@
     grid-template-columns: 1fr;
     gap: 18px;
     grid-template-rows: minmax(180px, auto);
-    max-height: 613px;
+    max-height: 619px;
     overflow-y: auto;
     padding-right: 10px;
     padding-left: 10px;
@@ -129,5 +129,6 @@
   .bookmark-btn{
     width: 48px;
     height: 36px;
+    color: black;
   }
 }
