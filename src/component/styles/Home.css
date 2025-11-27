@@ -417,6 +417,29 @@ border: none;
   .search-box {
     width: 100%;
   }
+  .Home-job-grid {
+    grid-template-columns: 1fr;
+    /* background-color: #ff5722; */
+    width: 100%;
+  }
+  .Home-sidebar {
+    width: 100%;
+    /* margin-bottom: 20px; */
+    order: 1;
+  }
+  .Home-main {
+    order: 2;
+    /* justify-content: center; */
+  }
+  .home-sorting-dropdown {
+    justify-content: center;
+  }
+  .home-sort-dropdown {
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
 
 
 }

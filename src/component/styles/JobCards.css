@@ -93,3 +93,13 @@
 .bookmark-btn.saved:hover {
   background: #ffd875;
 }
+
+/*  responsive for the cards */
+@media (max-width: 768px){
+  .joblists{
+    /* background-color: #ff5722; */
+    grid-template-columns: 1fr;
+    gap: 18px;
+    grid-template-rows: minmax(180px, auto);
+  }
+}
