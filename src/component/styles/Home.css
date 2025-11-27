@@ -610,6 +610,84 @@ border: none;
     font-size: 1.9rem;
   }
 }
+@media (max-width: 757px){
+.Home-content{
+  background-color: #ff5722;
+}
+@media (max-width: 757px) {
+  /* Hero section fix */
+  .Home-content {
+    /* padding-top: 180px; */
+    background-size: cover;
+    background-position: center;
+    height: 650px;
+  }
+
+  .Home-content h1 {
+    font-size: 26px;
+    margin-bottom: 15px;
+  }
+
+  .Home-content p {
+    font-size: 16px;
+    padding: 0 15px;
+  }
+
+  /* Search area spacing */
+  .search-area {
+    padding: 24px;
+    margin-top: 10px;
+  }
+
+  /* Stack search boxes vertically */
+  .search-boxes {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .search-box {
+    width: 100%;
+    padding: 1px;
+  }
+
+  .search-box select,
+  .search-box input {
+    font-size: 16px;
+  }
+
+  /* Search button full width */
+  .search-button {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 15px;
+  }
+
+  /* Sidebar comes first */
+  .Home-job-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .Home-sidebar {
+    order: 1;
+  }
+
+  .Home-main {
+    order: 2;
+  }
+
+  /* Dropdown alignment fix */
+  .home-sorting-dropdown {
+    justify-content: center;
+  }
+
+  .home-sort-dropdown {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+}
 /* iPhone SE 2022 / small Androids */
 /* @media (max-width: 480px) {
   .search-boxes {
