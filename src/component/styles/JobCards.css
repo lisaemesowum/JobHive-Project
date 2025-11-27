@@ -102,7 +102,7 @@
     grid-template-columns: 1fr;
     gap: 18px;
     grid-template-rows: minmax(180px, auto);
-    max-height: 600px;
+    max-height: 613px;
     overflow-y: auto;
     padding-right: 10px;
     padding-left: 10px;
