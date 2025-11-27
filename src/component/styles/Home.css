@@ -610,10 +610,7 @@ border: none;
     font-size: 1.9rem;
   }
 }
-@media (max-width: 757px){
-.Home-content{
-  background-color: #ff5722;
-}
+
 @media (max-width: 757px) {
   /* Hero section fix */
   .Home-content {
@@ -629,8 +626,9 @@ border: none;
   }
 
   .Home-content p {
-    font-size: 16px;
-    padding: 0 15px;
+    font-size: 18px;
+    padding: 0 18px;
+    width: 100%;
   }
 
   /* Search area spacing */
@@ -686,7 +684,7 @@ border: none;
     left: 50%;
     transform: translateX(-50%);
   }
-}
+
 }
 /* iPhone SE 2022 / small Androids */
 /* @media (max-width: 480px) {

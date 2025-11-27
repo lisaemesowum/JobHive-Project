@@ -4,6 +4,7 @@ import { FaAlignJustify } from "react-icons/fa";
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
   const [active, setActive] = useState("home");
+  
   return (
     <>
       <nav>
@@ -17,31 +18,26 @@ const Navbar = () => {
             <li>
               <a
                 href="#Home"
-                onClick={() => setIsOpen(false)}
+                onClick={() => {
+                  setActive("home");
+                  setIsOpen(false);
+                }}
                 className={
-                  active === "Home" ? "nav-item active-nav" : "nav-item"
+                  active === "home" ? "nav-item active-nav" : "nav-item"
                 }
               >
                 Home
               </a>
             </li>
-            {/* <li>
-              <a
-                href="#ContactUs"
-                onClick={() => setIsOpen(false)}
-                className={
-                  active === "ContactUs" ? "nav-item active-nav" : "nav-item"
-                }
-              >
-                Find Jobs
-              </a>
-            </li> */}
             <li>
               <a
                 href="#SavedJob"
-                onClick={() => setIsOpen(false)} 
+                onClick={() => {
+                  setActive("savedjob");
+                  setIsOpen(false);
+                }}
                 className={
-                  active === "SavedJob" ? "nav-item active-nav" : "nav-item"
+                  active === "savedJob" ? "nav-item active-nav" : "nav-item"
                 }
               >
                 Saved-Job
@@ -50,9 +46,12 @@ const Navbar = () => {
             <li>
               <a
                 href="#Feedback"
-                onClick={() => setIsOpen(false)}
+                onClick={() => {
+                  setActive("feedback");
+                  setIsOpen(false);
+                }}
                 className={
-                  active === "Feedback" ? "nav-item active-nav" : "nav-item"
+                  active === "feedback" ? "nav-item active-nav" : "nav-item"
                 }
               >
                 Feedback-Form
@@ -61,15 +60,17 @@ const Navbar = () => {
             <li>
               <a
                 href="#ContactUs"
-                onClick={() => setIsOpen(false)}
+                onClick={() => {
+                  setActive("contactus");
+                  setIsOpen(false);
+                }}
                 className={
-                  active === "ContactUs" ? "nav-item active-nav" : "nav-item"
+                  active === "contactUs" ? "nav-item active-nav" : "nav-item"
                 }
               >
                 Contact-Us
               </a>
             </li>
-
           </ul>
           <FaAlignJustify
             className="nav-menu-mobile"
