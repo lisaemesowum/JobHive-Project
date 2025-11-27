@@ -385,7 +385,7 @@ border: none;
     margin-bottom: 20px;
     font-family: "Roboto Slab", serif;
   }
-  .Home-content{
+  .Home-content {
     z-index: 100;
     height: 700px;
   }
@@ -412,7 +412,6 @@ border: none;
   .search-box input {
     font-size: 16px;
     font-family: "Roboto Slab", serif;
-
   }
   .search-box {
     width: 100%;
@@ -439,7 +438,12 @@ border: none;
     left: 50%;
     transform: translateX(-50%);
   }
-
-
-
+  .home-sort-btn {
+    font-family: "Roboto Slab", serif;
+  }
+  .home-sort-btn span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
