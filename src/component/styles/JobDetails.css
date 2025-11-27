@@ -81,7 +81,7 @@
   margin-bottom: 8px;
   color: #333;
   font-weight: 600;
-  border-bottom: 2px solid #ff5722;
+  border-bottom: 2px solid  #1B4D3E;
   display: inline-block;
   padding-bottom: 3px;
 }
@@ -111,7 +111,7 @@
 .jobapply-btn {
   margin-top: 30px;
   width: 100%;
-  background: #ff5722;
+  background:  #1B4D3E;
   padding: 12px 0;
   border-radius: 14px;
   border: none;
@@ -124,7 +124,7 @@
 }
 
 .apply-btn:hover {
-  background: #e2440e;
+  background:  #112a22;
   transform: scale(1.02);
 }
 @media (max-width: 768px) {
@@ -159,7 +159,7 @@
    .jobapply-btn {
     font-size: 16px;
     padding: 12px 0;
-    background-color: #e2440e;
-  }
+    background-color:  #1B4D3E
   
+}
 }

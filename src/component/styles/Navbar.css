@@ -88,12 +88,12 @@ nav {
   bottom: -4px;
   height: 2px;
   width: 0;
-  background: #ff5722;
+  background:  #1B4D3E;
   transition: width 0.3s ease;
 }
 
 .nav-item:hover {
-  color: #ff5722;
+  color:  #0a1814;
 }
 
 .nav-item:hover::after {
@@ -101,7 +101,7 @@ nav {
 }
 
 .active-nav {
-  color: #ff5722;
+  color:  #1B4D3E;
   font-weight: 600;
 }
 

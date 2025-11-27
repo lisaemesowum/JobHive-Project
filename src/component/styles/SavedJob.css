@@ -45,7 +45,7 @@
 
 /* === OPTIONAL: If remove button exists in JobList === */
 .remove-btn {
-  background: #ff4d4f;
+  background:  #1B4D3E;
   color: white;
   border: none;
   padding: 8px 14px;
@@ -56,5 +56,5 @@
 }
 
 .remove-btn:hover {
-  background: #d9363e;
+  background:  #132b24;
 }
