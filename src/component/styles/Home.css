@@ -448,9 +448,10 @@ border: none;
     font-family: "Roboto Slab", serif;
     font-size: 14px;
   }
-  .home-sort-dropdown{
+  .home-sort-option{
     font-family: "Roboto Slab", serif;
-    font-size: 13px;
+    /* font-size: 15px; */
+    background-color: #ff5722;
   }
 }
 
