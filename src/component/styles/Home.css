@@ -549,20 +549,20 @@ border: none;
     font-size: 1.4rem;
   }
   .Home-content p {
-    font-size: 1.0rem;
+    font-size: 1rem;
     font-family: "Roboto Slab", serif;
     margin-bottom: 20px;
     font-weight: 400;
     color: rgba(255, 255, 255, 0.84);
   }
-    .Home-content {
+  .Home-content {
     text-align: center;
     background-position: 0 71px;
     max-height: 690px;
     padding-top: 160px;
     color: #fff;
   }
-    .search-area {
+  .search-area {
     flex-direction: column;
     margin-top: 40px;
     padding: 24px;
@@ -586,3 +586,89 @@ border: none;
     width: 100%;
   }
 }
+/* iPhone 14 Pro Max portrait, Samsung S22 */
+@media (max-width: 600px) {
+  .search-box select {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .search-box input {
+    font-size: 14px;
+  }
+
+  .search-button {
+    width: 100%;
+  }
+}
+/* iPhone 13/14, many Android phones */
+@media (max-width: 515px) {
+  .Home-content {
+    padding-top: 140px;
+  }
+
+  .Home-content h1 {
+    font-size: 1.9rem;
+  }
+}
+/* iPhone SE 2022 / small Androids */
+/* @media (max-width: 480px) {
+  .search-boxes {
+    gap: 8px;
+  }
+
+  .search-box select option {
+    font-size: 11px;
+  }
+} */
+/* Tecno / Infinix small screen */
+/* @media (max-width: 452px) {
+  .search-area {
+    padding: 20px;
+    padding-top: 2px;
+  }
+
+  .search-box {
+    padding: 8px 10px;
+  }
+  .search-button {
+    font-size: 14px;
+  }
+  .Home-content p {
+    font-size: 13px;
+  }
+  .Home-content h1 {
+    font-size: 1.4rem;
+  }
+  .Home-content {
+     max-height: 600px;
+  }
+} */
+
+/* Many budget smartphones */
+/* @media (max-width: 450px) {
+  .search-box input,
+  .search-box select {
+    font-size: 12px;
+  }
+
+  .Home-job-grid {
+    padding: 5px;
+  }
+} */
+
+/* VERY small screen Android phones */
+/* @media (max-width: 401px) {
+  .Home-content h1 {
+    font-size: 1.6rem;
+  }
+
+  .search-button {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+
+  .search-box select {
+    font-size: 11px;
+  }
+} */
