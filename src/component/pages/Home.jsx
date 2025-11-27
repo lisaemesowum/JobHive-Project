@@ -262,18 +262,18 @@ const Home = ({ savedJobs, setSavedJobs }) => {
                     "Date Posted",
                     "Salary (High to low)",
                     "Relevance Area",
-                  ].map((option) => (
+                  ].map((options) => (
                     <div
-                      key={option}
+                      key={options}
                       className={`home-sort-option ${
-                        selectedSort === option ? "active" : ""
+                        selectedSort === options ? "active" : ""
                       }`}
                       onClick={() => {
-                        setSelectedSort(option);
+                        setSelectedSort(options);
                         setIsDropdownOpen(false);
                       }}
                     >
-                      {option}
+                      {options}
                     </div>
                   ))}
                 </div>
