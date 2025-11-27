@@ -416,7 +416,6 @@ border: none;
   }
   .Home-job-grid {
     grid-template-columns: 1fr;
-    /* background-color: #ff5722; */
     width: 100%;
   }
   .Home-sidebar {
@@ -460,14 +459,130 @@ border: none;
   .Home-sidebar {
     padding: 20px;
   }
-  .Home-job-grid{
+  .Home-job-grid {
     /* background-color: #ff5722; */
     padding: 10px;
   }
-  .filter-group{
+  .filter-group {
     padding: 0 20px;
-  border-radius: 4px;
-  margin-bottom: 25px;
-  
+    border-radius: 4px;
+    margin-bottom: 25px;
+  }
+}
+/*  larger tablet / small laptops*/
+@media (max-width: 1024px) {
+  .Home-content h1 {
+    font-size: 3.2rem;
+    font-family: "Roboto Slab", serif;
+    font-weight: 400;
+    margin-bottom: 8px;
+    padding: 9px;
+  }
+  .Home-content {
+    text-align: center;
+    background-position: 0 71px;
+    max-height: 500px;
+    padding-top: 160px;
+    color: #fff;
+  }
+  .Home-content p {
+    font-size: 1.4rem;
+    font-family: "Roboto Slab", serif;
+    margin-bottom: 20px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.84);
+  }
+  .search-boxes {
+    width: 90%;
+  }
+  .search-box input {
+    font-size: 16px;
+    padding: 7px;
+  }
+  .search-button {
+    /* padding: 1px 20px; */
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 17px;
+    font-family: "Poppins", sans-serif;
+    flex-shrink: 0;
+    align-items: stretch;
+    padding: 0 30px;
+  }
+  .Home-job-grid {
+    grid-template-columns: 250px 1fr;
+    padding: 0px;
+    width: 100%;
+  }
+}
+@media (max-width: 900px) {
+  .Home-content h1 {
+    font-size: 2.3rem;
+  }
+
+  .Home-job-grid {
+    grid-template-columns: 220px 1fr;
+  }
+}
+/* Large phones */
+@media (max-width: 690px) {
+  .search-area {
+    padding: 10px;
+  }
+
+  .search-boxes {
+    padding: 8px;
+  }
+
+  .Home-job-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .Home-sidebar {
+    order: 1;
+  }
+
+  .Home-main {
+    order: 2;
+  }
+  .Home-content h1 {
+    font-size: 1.4rem;
+  }
+  .Home-content p {
+    font-size: 1.0rem;
+    font-family: "Roboto Slab", serif;
+    margin-bottom: 20px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.84);
+  }
+    .Home-content {
+    text-align: center;
+    background-position: 0 71px;
+    max-height: 690px;
+    padding-top: 160px;
+    color: #fff;
+  }
+    .search-area {
+    flex-direction: column;
+    margin-top: 40px;
+    padding: 24px;
+  }
+  .search-button {
+    padding: 12px 5px;
+  }
+  /* .search-area {
+    gap: 15px;
+    border-radius: 8px;
+  } */
+  .search-boxes {
+    flex-direction: column;
+    width: 100%;
+  }
+  .search-box input {
+    font-size: 16px;
+    font-family: "Roboto Slab", serif;
+  }
+  .search-box {
+    width: 100%;
   }
 }
