@@ -95,14 +95,22 @@
 }
 
 /*  responsive for the cards */
-@media (max-width: 768px){
-  .joblists{
+@media (max-width: 768px) {
+  .joblists {
     /* background-color: #ff5722; */
     grid-template-columns: 1fr;
     gap: 18px;
     grid-template-rows: minmax(180px, auto);
+    max-height: 640px;
+    overflow-y: auto;
+    padding-right: 10px;
+    padding-left: 10px;
   }
-  .jobs-btn{
+  .jobs-btn {
+    font-family: "Roboto Slab", serif;
+    color: white;
+  }
+  .applyJob-button {
     font-family: "Roboto Slab", serif;
     color: white;
   }

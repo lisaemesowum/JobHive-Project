@@ -451,7 +451,11 @@ border: none;
   .home-sort-option{
     font-family: "Roboto Slab", serif;
     /* font-size: 15px; */
-    background-color: #ff5722;
+    /* background-color: #ff5722; */
+  }
+  .home-sort-option.active{
+   font-family: "Roboto Slab", serif;
+    color: rgba(0, 0, 0, 0.915);
   }
 }
 
