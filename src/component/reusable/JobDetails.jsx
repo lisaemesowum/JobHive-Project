@@ -82,9 +82,11 @@ const JobDetails = ({
         </div>
       )}
 
-      <button onClick={onApply} className="jobapply-btn">
-        Apply Now
-      </button>
+      <div>
+        <button onClick={onApply} className="jobapply-btn">
+          Apply Now
+        </button>
+      </div>
     </div>
   );
 };

@@ -13,8 +13,14 @@
 
 /* Smooth fade in */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ====== BACK BUTTON ====== */
@@ -106,11 +112,11 @@
   margin-top: 30px;
   width: 100%;
   background: #ff5722;
-  padding: 14px 0;
+  padding: 12px 0;
   border-radius: 14px;
   border: none;
   color: white;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 600;
   cursor: pointer;
   transition: 0.25s ease;
@@ -120,4 +126,40 @@
 .apply-btn:hover {
   background: #e2440e;
   transform: scale(1.02);
+}
+@media (max-width: 768px) {
+  .job-details {
+    width: 95%;
+    padding: 20px;
+    margin: 20px auto;
+  }
+  .job-title {
+    font-size: 1.6rem;
+  }
+  .company {
+    font-size: 16px;
+  }
+
+  .job-meta {
+    padding: 12px 14px;
+  }
+  .job-meta p {
+    font-size: 14px;
+    
+  }
+  .job-description h3,
+  .job-responsibilities h3,
+  .job-requirements h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+  }
+  .job-description{
+     margin-bottom: 10px;
+  }
+   .jobapply-btn {
+    font-size: 16px;
+    padding: 12px 0;
+    background-color: #e2440e;
+  }
+  
 }
