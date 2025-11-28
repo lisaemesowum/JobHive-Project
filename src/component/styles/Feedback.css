@@ -47,6 +47,16 @@
   transition: 0.3s;
   color: white;
 }
+.star {
+  color: #555;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.star.filled {
+  color: #ffaa00;
+  transform: scale(1.1);
+}
 .feedback-btn:hover {
   background: #0e1f1a;
 }
