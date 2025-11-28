@@ -143,216 +143,219 @@ const Home = ({ savedJobs, setSavedJobs }) => {
   };
 
   return (
-    <div id="Home" className="Home-container">
-      <div className="Home-content">
-        <h1>Welcome to JobHive, Find your next Opportunity</h1>
-        <p>
-          Your gateway to exciting career opportunities. Explore jobs, connect
-          with employers, and take the next step in your professional journey
-          with JobHive.
-        </p>
-        {/* search area */}
-        <div className="">
-          <SearchBar onSearch={handleSearch} />
+    <>
+      <div id="Home" className="Home-container">
+        <div className="Home-content">
+          <h1>Welcome to JobHive, Find your next Opportunity</h1>
+          <p>
+            Your gateway to exciting career opportunities. Explore jobs, connect
+            with employers, and take the next step in your professional journey
+            with JobHive.
+          </p>
+          {/* search area */}
+          <div className="">
+            <SearchBar onSearch={handleSearch} />
+          </div>
         </div>
-      </div>
-      {/* find jobs category, experience, job type , remote  sidebar   */}
-      <div className="Home-jobs-container">
-        <div className="Home-job-grid">
-          {/* sidebar */}
-          <aside className="Home-sidebar">
-            <fieldset className="filter-group">
-              <legend>Job Category</legend>
-              {[
-                "IT & Software",
-                "Marketing",
-                "Finance",
-                "Healthcare",
-                "Government & Public Sector",
-              ].map((cat) => (
-                <label key={cat} className="home-toggle">
-                  <input
-                    type="radio"
-                    name="category"
-                    value={cat}
-                    checked={filters.category === cat}
-                    onChange={() =>
-                      setFilters((prev) => ({ ...prev, category: cat }))
-                    }
-                  />
-                  {cat}
-                </label>
-              ))}
-            </fieldset>
-            {/* experience level */}
-            <fieldset className="filter-group">
-              <legend>Experience level</legend>
-              {["Entry", "Mid", "Senior"].map((exp) => (
-                <label key={exp} className="home-toggle">
-                  <input
-                    type="radio"
-                    name="experience"
-                    value={exp}
-                    checked={filters.experience === exp}
-                    onChange={() =>
-                      setFilters((prev) => ({ ...prev, experience: exp }))
-                    }
-                  />
-                  {exp}
-                </label>
-              ))}
-            </fieldset>
-            {/* job type */}
-            <fieldset className="filter-group">
-              <legend>Job Type</legend>
-              {["Full-time", "Part-time", "Internship", "Contract"].map(
-                (type) => (
-                  <label key={type} className="home-toggle">
+        {/* find jobs category, experience, job type , remote  sidebar   */}
+        <div className="Home-jobs-container">
+          <div className="Home-job-grid">
+            {/* sidebar */}
+            <aside className="Home-sidebar">
+              <fieldset className="filter-group">
+                <legend>Job Category</legend>
+                {[
+                  "IT & Software",
+                  "Marketing",
+                  "Finance",
+                  "Healthcare",
+                  "Government & Public Sector",
+                ].map((cat) => (
+                  <label key={cat} className="home-toggle">
                     <input
                       type="radio"
-                      name="jobType"
-                      value={type}
-                      checked={filters.jobType === type}
+                      name="category"
+                      value={cat}
+                      checked={filters.category === cat}
                       onChange={() =>
-                        setFilters((prev) => ({ ...prev, jobType: type }))
+                        setFilters((prev) => ({ ...prev, category: cat }))
                       }
                     />
-                    {type}
+                    {cat}
                   </label>
-                )
-              )}
-            </fieldset>
-            {/* remote */}
-            <fieldset className="filter-group">
-              <legend>Remote / Onsite</legend>
-              {["Remote", "Onsite"].map((remote) => (
-                <label key={remote} className="home-toggle">
-                  <input
-                    type="radio"
-                    name="remote"
-                    value={remote}
-                    checked={filters.remote === remote}
-                    onChange={() => setFilters((prev) => ({ ...prev, remote }))}
-                  />
-                  {remote}
-                </label>
-              ))}
-            </fieldset>
-          </aside>
-          {/*  main area */}
-          <div className="Home-main">
-            {/* main job area  */}
-            <div className="home-sorting-dropdown">
-              <button
-                className="home-sort-btn"
-                onClick={() => {
-                  setIsDropdownOpen(!isDropdownOpen);
-                }}
-              >
-                Sort by:{" "}
-                <span>
-                  {selectedSort}
-                  <IoMdArrowDropdown />
-                </span>
-              </button>
-              {/* dropdown */}
-              {isDropdownOpen && (
-                <div className="home-sort-dropdown">
-                  {[
-                    "Date Posted",
-                    "Salary (High to low)",
-                    "Relevance Area",
-                  ].map((options) => (
-                    <div
-                      key={options}
-                      className={`home-sort-option ${
-                        selectedSort === options ? "active" : ""
-                      }`}
-                      onClick={() => {
-                        setSelectedSort(options);
-                        setIsDropdownOpen(false);
-                      }}
-                    >
-                      {options}
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-            {/* job lists */}
-            <div className={`home-area ${showApplyUI ? "blurred" : ""}`}>
-              {selectedJob ? (
-                <JobDetails
-                  job={selectedJob}
-                  onBack={handleBack}
-                  onApply={handleApply}
-                  onRemove={handleRemoveJob}
-                  onSave={handleSaveJob}
-                  savedJobs={savedJobs}
-                />
-              ) : (
-                <JobList
-                  jobs={filteredJob}
-                  onSelect={setSelectedJob}
-                  onSave={handleSaveJob}
-                  savedJobs={savedJobs}
-                  onRemove={handleRemoveJob}
-                />
-              )}
-
-              {/* Job details */}
-              {showApplyUI && (
-                <div className="home-appy-container">
-                  <div className="home-apply-ui">
-                    <h2>Apply for {selectedJob.title}</h2>
-                    <form className="Home-apply-form">
-                      <label>
-                        Name:
-                        <input
-                          type="text"
-                          placeholder="Enter your name"
-                          required
-                        />
-                      </label>
-                      <label>
-                        Email:
-                        <input
-                          type="email"
-                          placeholder="Enter your Email"
-                          required
-                        />
-                      </label>
-                      <label className="home-optional">
-                        Resume(optional);
-                        <input type="file" />
-                      </label>
-                      <label>
-                        Cover Letter:
-                        <textarea
-                          type="text"
-                          placeholder="Write your cover letter.........."
-                          rows={4}
-                          required
-                        />
-                      </label>
-
-                      <div className="home-submit">
-                        <button tyoe="submit" className="home-submit-btn">
-                          Submit
-                        </button>
-                        <button
-                          onClick={() => setShowApplyUI(false)}
-                          className="home-close"
-                        >
-                          Close
-                        </button>
+                ))}
+              </fieldset>
+              {/* experience level */}
+              <fieldset className="filter-group">
+                <legend>Experience level</legend>
+                {["Entry", "Mid", "Senior"].map((exp) => (
+                  <label key={exp} className="home-toggle">
+                    <input
+                      type="radio"
+                      name="experience"
+                      value={exp}
+                      checked={filters.experience === exp}
+                      onChange={() =>
+                        setFilters((prev) => ({ ...prev, experience: exp }))
+                      }
+                    />
+                    {exp}
+                  </label>
+                ))}
+              </fieldset>
+              {/* job type */}
+              <fieldset className="filter-group">
+                <legend>Job Type</legend>
+                {["Full-time", "Part-time", "Internship", "Contract"].map(
+                  (type) => (
+                    <label key={type} className="home-toggle">
+                      <input
+                        type="radio"
+                        name="jobType"
+                        value={type}
+                        checked={filters.jobType === type}
+                        onChange={() =>
+                          setFilters((prev) => ({ ...prev, jobType: type }))
+                        }
+                      />
+                      {type}
+                    </label>
+                  )
+                )}
+              </fieldset>
+              {/* remote */}
+              <fieldset className="filter-group">
+                <legend>Remote / Onsite</legend>
+                {["Remote", "Onsite"].map((remote) => (
+                  <label key={remote} className="home-toggle">
+                    <input
+                      type="radio"
+                      name="remote"
+                      value={remote}
+                      checked={filters.remote === remote}
+                      onChange={() =>
+                        setFilters((prev) => ({ ...prev, remote }))
+                      }
+                    />
+                    {remote}
+                  </label>
+                ))}
+              </fieldset>
+            </aside>
+            {/*  main area */}
+            <div className="Home-main">
+              {/* main job area  */}
+              <div className="home-sorting-dropdown">
+                <button
+                  className="home-sort-btn"
+                  onClick={() => {
+                    setIsDropdownOpen(!isDropdownOpen);
+                  }}
+                >
+                  Sort by:{" "}
+                  <span>
+                    {selectedSort}
+                    <IoMdArrowDropdown />
+                  </span>
+                </button>
+                {/* dropdown */}
+                {isDropdownOpen && (
+                  <div className="home-sort-dropdown">
+                    {[
+                      "Date Posted",
+                      "Salary (High to low)",
+                      "Relevance Area",
+                    ].map((options) => (
+                      <div
+                        key={options}
+                        className={`home-sort-option ${
+                          selectedSort === options ? "active" : ""
+                        }`}
+                        onClick={() => {
+                          setSelectedSort(options);
+                          setIsDropdownOpen(false);
+                        }}
+                      >
+                        {options}
                       </div>
-                    </form>
+                    ))}
                   </div>
-                </div>
-              )}
-              {/* confirmation model */}
-              {/* {showConfirmation &&  selectedJob &&(
+                )}
+              </div>
+              {/* job lists */}
+              <div className={`home-area ${showApplyUI ? "blurred" : ""}`}>
+                {selectedJob ? (
+                  <JobDetails
+                    job={selectedJob}
+                    onBack={handleBack}
+                    onApply={handleApply}
+                    onRemove={handleRemoveJob}
+                    onSave={handleSaveJob}
+                    savedJobs={savedJobs}
+                  />
+                ) : (
+                  <JobList
+                    jobs={filteredJob}
+                    onSelect={setSelectedJob}
+                    onSave={handleSaveJob}
+                    savedJobs={savedJobs}
+                    onRemove={handleRemoveJob}
+                  />
+                )}
+
+                {/* Job details */}
+                {showApplyUI && (
+                  <div className="home-appy-container">
+                    <div className="home-apply-ui">
+                      <h2>Apply for {selectedJob.title}</h2>
+                      <form className="Home-apply-form">
+                        <label>
+                          Name:
+                          <input
+                            type="text"
+                            placeholder="Enter your name"
+                            required
+                          />
+                        </label>
+                        <label>
+                          Email:
+                          <input
+                            type="email"
+                            placeholder="Enter your Email"
+                            required
+                          />
+                        </label>
+                        <label className="home-optional">
+                          Resume(optional);
+                          <input type="file" />
+                        </label>
+                        <label>
+                          Cover Letter:
+                          <textarea
+                            type="text"
+                            placeholder="Write your cover letter.........."
+                            rows={4}
+                            required
+                          />
+                        </label>
+
+                        <div className="home-submit">
+                          <button tyoe="submit" className="home-submit-btn">
+                            Submit
+                          </button>
+                          <button
+                            onClick={() => setShowApplyUI(false)}
+                            className="home-close"
+                          >
+                            Close
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                )}
+                {/* confirmation model */}
+                {/* {showConfirmation &&  selectedJob &&(
               <div className="home-confimation">
                 <div className="home-ccon">
                   <h2>Application Submitted</h2>
@@ -366,12 +369,13 @@ const Home = ({ savedJobs, setSavedJobs }) => {
                 </div>
               </div>
             )} */}
+              </div>
+              {/* end */}
             </div>
-            {/* end */}
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

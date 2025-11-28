@@ -74,16 +74,4 @@
     transform: translateY(0);
   }
 }
-@media (max-width: 768px) {
-  .feedback-wrapper {
-    grid-template-columns: 1fr;
-  }
-
-  .feedback-image {
-    height: 250px;
-  }
-
-  .feedback-image img {
-    border-top: 1px solid #333;
-  }
-}
+/* responsive */

@@ -1,0 +1,129 @@
+.footer {
+  background: #1b4d3e;
+  color: #ffffff;
+  padding: 50px 20px 20px;
+  font-family: "PT Serif", serif;
+  margin-top: 50px;
+}
+
+.footer-container {
+  /* display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: flex-start; */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 30px 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+.footer-logo h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.footer-logo p {
+  color: #d1d1d1d3;
+  line-height: 1.6;
+  max-width: 520px;
+  font-size: 15px;
+}
+
+/* Quick Links */
+.footer-links h3,
+.footer-contact h3 {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  color: #ffaa00;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin: 10px 0;
+}
+
+.footer-links ul li a {
+  color: #d1d1d1;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: #ffaa00;
+  padding-left: 5px;
+}
+
+/* Contact Section */
+.footer-contact p {
+  margin: 8px 0;
+  color: #d1d1d1;
+}
+
+/* Social Icons */
+.footer-social {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  background: #1a1f2e;
+  border-radius: 8px;
+  color: #ffffff;
+  transition: 0.3s ease;
+  font-size: 18px;
+}
+
+.footer-social a:hover {
+  background: #ffaa00;
+  color: #000;
+  transform: translateY(-3px);
+}
+
+/* Footer bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 15px;
+  border-top: 1px solid #333;
+}
+
+.footer-bottom p {
+  color: white;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+/* @media (max-width: 768px) {
+  .footer {
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+} */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-links,
+  .footer-contact {
+    margin-top: 20px;
+  }
+}
