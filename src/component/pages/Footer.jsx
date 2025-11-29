@@ -49,16 +49,32 @@ const Footer = () => {
           <p>Email: info@JobHive.com</p>
           <p>Phone: +234 8104257467</p>
           <div className="footer-social">
-            <a href="#">
+            <a
+              href="https://www.facebook.com/share/1PpssERkWo/?mibextid=wwXIfr"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaFacebookF />
             </a>
-            <a href="https://linkedin.com/in/lisa-emesowum-a4630835a">
+            <a
+              href="https://x.com/kinglisa_1?s=21"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaTwitter />
             </a>
-            <a href="https://www.instagram.com/kinglisa_1?igsh=eGw0ZGFobDV1bTVo&utm_source=qr">
+            <a
+              href="https://www.instagram.com/kinglisa_1?igsh=eGw0ZGFobDV1bTVo&utm_source=qr"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaInstagram />
             </a>
-            <a href="">
+            <a
+              href="https://www.linkedin.com/in/lisa-emesowum-a4630835a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaLinkedinIn />
             </a>
           </div>
