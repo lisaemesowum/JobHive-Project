@@ -34,7 +34,7 @@ const Contact = () => {
             <p className="contact-us">
               <strong>Phone:</strong>
               <br />
-              ‪+234 800 123 4567‬
+              ‪+234 810 4257 467‬
             </p>
           </div>
         </div>
