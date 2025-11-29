@@ -8,10 +8,10 @@ const Feedback = () => {
   const [feedback, setFeedback] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (rating === 0) {
-      alert("Please select a star rating.Thank You");
-      return;
-    }
+    // if (rating === 0) {
+    //   alert("Please select a star rating.Thank You");
+    //   return;
+    // }
      if (feedback.trim() === "") {
       alert("Please write a feedback Message.Thank You");
       return;
