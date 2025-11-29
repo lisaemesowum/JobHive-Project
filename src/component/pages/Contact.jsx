@@ -1,6 +1,6 @@
 import React from "react";
-import contactBg from "../../assets/contactBg.jpg"
-import "../styles/Contact.css"
+import contactBg from "../../assets/contactBg.jpg";
+import "../styles/Contact.css";
 const Contact = () => {
   return (
     <div id="ContactUs" className="contact-page">
@@ -18,36 +18,28 @@ const Contact = () => {
       <div className="contact-container">
         <div className="contact-form">
           <h3>Send Us a Message</h3>
-          <form>
-            <div className="form-group">
-              <label htmlFor="name">Full Name</label>
-              <input type="text" id="name" placeholder="Enter your name" />
-            </div>
 
-            <div className="form-group">
-              <label htmlFor="email">Email Address</label>
-              <input type="email" id="email" placeholder="Enter your email" />
-            </div>
-            <div className="form-group">
-              <label htmlFor="message">Message</label>
-              <textarea
-                id="message"
-                rows="5"
-                placeholder="Type your message here"
-              ></textarea>
-            </div>
+          <div className="contactus-info">
+            <p className="contact-us">
+              <strong>Our Office Addrees:</strong>
+              <br />
+              123 College Avenue, Main City, NG
+            </p>
 
-            <button type="submit" className="submit-btn">
-              Send Message
-            </button>
-          </form>
+            <p className="contact-us">
+              <strong>Email:</strong>
+              <br />
+              jobhive7@.gmal.com
+            </p>
+            <p className="contact-us">
+              <strong>Phone:</strong>
+              <br />
+              ‪+234 800 123 4567‬
+            </p>
+          </div>
         </div>
         <div className="contact-info">
           <h3>Job Hive Location</h3>
-          <p>123 College Avenue, Main City, NG</p>
-          <p>Email: jobhive7@.gmal.com</p>
-          <p>Phone: ‪+234 800 123 4567‬</p>
-
           <div className="map-container">
             <iframe
               title="Campus Map"

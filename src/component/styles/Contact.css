@@ -1,20 +1,20 @@
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
-   background-color: #f8f8f5; 
+  background-color: #f8f8f5;
 }
 
-
 .contact-page {
-  color: #1B4D3E; 
-  background-color: #f8f8f5; 
-  
+  color: #1b4d3e;
+  background-color: #f8f8f5;
+
   min-height: 100vh;
   width: 100%;
   font-family: "Segoe UI", sans-serif;
 }
 .contact-hero {
-  background-image: url("../assets/contact-bg.jpg"); 
+  background-image: url("../assets/contact-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -23,10 +23,9 @@ body, html {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative; 
+  position: relative;
   overflow: hidden;
 }
-
 
 .contact-hero::before {
   content: "";
@@ -35,30 +34,29 @@ body, html {
   left: 0;
   width: 100%;
   height: 100%;
-  background:  #1B4D3E; 
+  background: #1b4d3e;
   opacity: 0.4;
   z-index: 1;
 }
 
 .contact-hero h2,
 .contact-hero p {
-  position: relative; 
+  position: relative;
   z-index: 2;
   text-align: center;
   width: 100%;
-  color: #fff; 
+  color: #fff;
 }
-
 
 .contact-hero h2 {
   font-size: 3.2rem;
   margin-bottom: 0.5rem;
   font-family: brico;
-} 
+}
 
 .contact-hero p {
   font-size: 1.1rem;
-} 
+}
 
 .contact-header {
   text-align: center;
@@ -72,7 +70,7 @@ body, html {
 }
 
 .contact-header p {
-  color: #dcdcd2; 
+  color: #dcdcd2;
   font-size: 1.1rem;
 }
 
@@ -85,21 +83,22 @@ body, html {
   justify-content: center;
 }
 
-.contact-form, .contact-info {
+.contact-form,
+.contact-info {
   background-color: white;
   padding: 2rem;
   border-radius: 6px;
   flex: 1 1 350px;
-  box-shadow: 0 4px 2px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 2px rgba(0, 0, 0, 0.2);
 }
 @font-face {
-    font-family: 'brico';
-    src: url('../assets/Bricolage_Grotesque/static/BricolageGrotesque-Light.ttf');
+  font-family: "brico";
+  src: url("../assets/Bricolage_Grotesque/static/BricolageGrotesque-Light.ttf");
 }
 .contact-form h3,
 .contact-info h3 {
   margin-bottom: 1rem;
-  color: #1B4D3E;
+  color: #1b4d3e;
   text-align: center;
   font-family: brico;
   font-size: 1.5rem;
@@ -109,45 +108,16 @@ body, html {
   margin-bottom: 1rem;
 }
 .contact-info p {
-    margin-bottom: 10px;
-}
-.form-group label {
-  display: block;
-  font-size: 0.9rem;
-  margin-bottom: 0.3rem;
+  margin-bottom: 10px;
 }
 
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 0.75rem;
-  border-radius: 6px;
-  border: 1px solid #cdcdcd;
-  font-size: 0.95rem;
+.contactus-info h4 {
+  margin-bottom: 15px;
 }
-
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-  color: #aaa;
-}
-
-.submit-btn {
-  color: #f8f8f5;
-  background-color: #1B4D3E;
-  border: none;
-  padding: 1rem 1.5rem;
-  margin: 15px 0;
-  border-radius: 25px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s ease;
-  width: 100%;
-  font-size: 1.1rem;
-}
-
-.submit-btn:hover {
-   transform: translateY(-2px);
-   opacity: 0.8;
+.contact-us {
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 .contact-info ul {
@@ -165,27 +135,27 @@ body, html {
   border-radius: 8px;
   width: 100%;
 }
-@media(max-width:452px){
-    .contact-hero h2{
-        font-size: 2.4;
-    }
+@media (max-width: 452px) {
+  .contact-hero h2 {
+    font-size: 2.4;
+  }
 }
 @media (max-width: 768px) {
   .contact-hero {
-    height: 40vh;             
+    height: 40vh;
     padding: 10px;
   }
 
   .contact-hero h2 {
-    font-size: 2.2rem;           
+    font-size: 2.2rem;
   }
 }
 
 @media (max-width: 480px) {
-    .contact-page{
-        background-color: aqua;
-      padding-top: 20px;
-    }
+  .contact-page {
+    background-color: aqua;
+    padding-top: 20px;
+  }
   .contact-hero {
     height: 35vh;
   }
