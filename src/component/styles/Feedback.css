@@ -98,5 +98,8 @@
  .feedback-form{
   padding: 20px;
  }
-  
+ .feedback-btn{
+  font-size: 16px;
+ }
+ 
 }
