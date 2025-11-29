@@ -85,3 +85,18 @@
   }
 }
 /* responsive */
+@media (max-width: 768px) {
+  .feedbackcontainer{
+    /* max-width: 100%; */
+    margin: 10px;
+      grid-template-columns: 1fr;
+    background-color: #ffaa00;
+  }
+  .feedback-image{
+    display: none;
+  }
+ .feedback-form{
+  padding: 20px;
+ }
+  
+}

@@ -5,19 +5,22 @@ import JobDetails from "../reusable/JobDetails";
 const SavedJob = ({ savedJobs, setSavedJobs }) => {
   const [selectedJob, setSelectedJob] = useState(null);
   const [showApplyUI, setShowApplyUI] = useState(false);
+
+
+  // save job
   const handleSaveJob = (job) => {
     if (!savedJobs.some((saved) => saved.id === job.id)) {
       const updated = [...savedJobs, job];
       setSavedJobs(updated);
       localStorage.setItem("savedJobs", JSON.stringify(updated));
-      alert(`${job.title} saved! ✅`);
+      alert(`${job.title} saved!`);
     }
   };
   const handleRemoveJob = (jobId) => {
     const updatedSaved = savedJobs.filter((job) => job.id !== jobId);
     setSavedJobs(updatedSaved);
     localStorage.setItem("savedJobs", JSON.stringify(updatedSaved));
-    alert("Job removed from saved! ❌");
+    alert("Job removed from saved!");
   };
   const handleBack = () => {
     setSelectedJob(null);
